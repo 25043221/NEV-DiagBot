@@ -9,11 +9,9 @@ st.set_page_config(
     page_icon="🤖",
     layout="wide"  # 使用宽布局，更像 Gemini
 )
-
 # --- 应用标题和介绍 ---
 st.title("🤖 个人理财助手")
 st.caption("一个由本地大模型驱动，能够回答您个人理财问题的智能助手。")
-
 
 # --- 后端初始化 ---
 
