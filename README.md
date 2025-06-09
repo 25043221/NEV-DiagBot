@@ -1,4 +1,4 @@
-NEV-DiagBot: 新能源汽车智能诊断与知识助手 🚗💡
+[NEV-DiagBot: 新能源汽车智能诊断与知识助手 🚗💡
 
 
 🌟 项目简介
@@ -100,3 +100,4 @@ streamlit run app.py
 模型微调：基于专业数据集对Qwen3模型进行领域微调，进一步提升专业问答能力和降低幻觉。
 安全与隐私：增强数据脱敏和隐私保护机制。
 部署优化：提供更便捷的部署方案，如Docker容器化。
+](https://gemini.google.com/app/88315204070455fb#:~:text=NEV%2DDiagBot%3A%20%E6%96%B0,Docker%E5%AE%B9%E5%99%A8%E5%8C%96%E3%80%82)
