@@ -109,7 +109,6 @@
 
 ## 故障排除
 
-- **模型加载失败**：检查 `config.json` 中 `tiny_bert_model_path` 是否正确。
 - **Ollama 未启动**：确保本地服务运行，且模型已下载。
 - **Tavily Key 错误**：确认 `keys.json` 中 `TAVILY_API_KEY` 是否正确。
 - **知识库未识别**：确保 `data/` 目录存在且包含文档，`chunk.py` 会自动查找该目录。
