@@ -1,15 +1,12 @@
 import os
 from typing import List, Any, Dict, Union
 
-from langchain_core.messages import BaseMessage, HumanMessage, AIMessage  # 导入BaseMessage, HumanMessage, AIMessage
-from langchain_core.output_parsers import StrOutputParser
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder  # 导入MessagesPlaceholder
-from langchain_core.runnables import RunnablePassthrough, RunnableLambda
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_ollama import ChatOllama
 from langchain_community.tools import TavilySearchResults
 from langchain.agents import AgentExecutor, create_tool_calling_agent
 
-# 引入StreamlitChatMessageHistory用于多轮对话历史管理
+
 from langchain_core.chat_history import BaseChatMessageHistory
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
@@ -17,8 +14,6 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 from embed import query_db
 from load_key import load_key
 
-# 确保Tavily API Key被加载
-# 您可以在Keys.json中添加 "TAVILY_API_KEY": "YOUR_TAVILY_API_KEY"
 os.environ["TAVILY_API_KEY"] = load_key("TAVILY_API_KEY")
 
 
@@ -116,8 +111,9 @@ class ChatAgent:
         """
         # 1. 从向量库检索相关上下文
         retrieved_results = query_db(question, n_results)
-        context_docs = retrieved_results["documents"][0] if retrieved_results["documents"] else []
-        context_metadatas = retrieved_results["metadatas"][0] if retrieved_results["metadatas"] else []
+        context_docs = retrieved_results["documents"][0]
+        context_metadatas = retrieved_results["metadatas"][0]
+
 
         # 2. 将上下文信息加入到Agent的输入中
         # AgentExecutor的invoke方法接受一个字典作为输入
@@ -133,14 +129,9 @@ class ChatAgent:
         response = self.chain.invoke(inputs, config={"configurable": {"session_id": session_id}})
 
         # 4. 构建更丰富的来源信息
-        sources = []
-        for i, meta in enumerate(context_metadatas):
-            source_info = f"来源: 用户手册"
-            if 'page_num' in meta:
-                source_info += f", 页码: {meta['page_num']}"
-            sources.append(source_info)
-
+        sources = ["来源: 本地知识库"] if context_docs else []
         unique_sources = list(set(sources))
+
 
         return {
             "question": question,
