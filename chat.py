@@ -116,9 +116,6 @@ class ChatAgent:
 
 
         # 2. 将上下文信息加入到Agent的输入中
-        # AgentExecutor的invoke方法接受一个字典作为输入
-        # 我们需要将检索到的上下文也作为输入的一部分传递给Agent。
-        # 这里的context_docs将作为system prompt的一部分，与Agent的工具和历史结合。
         inputs = {
             "question": question,
             "context": "\n\n".join(context_docs)  # 将检索到的文档作为上下文传递
