@@ -24,23 +24,23 @@ class ChatAgent:
     def _build_chain(self) -> Any:
         """
         构建聊天处理链
-
-        Returns:
-            配置好的LangChain处理链
         """
-        # 1. 定义提示模板
+        # 1. 定义针对新能源汽车领域的提示模板
         template = """
-        你是一个专业的问答助手，请基于以下上下文信息回答问题。
-        如果上下文信息不足以回答问题，请说明你不知道。
-        保持回答简洁、专业且准确。
+        你是一个专业的新能源汽车诊断与知识助手。请严格根据下面提供的“上下文信息”来回答用户的问题。
+        你的回答应该遵循以下准则：
+        1. 直接、简洁地回答问题核心。
+        2. 如果是故障诊断，请列出可能的故障原因和建议的检查步骤。
+        3. 如果“上下文信息”中没有足够信息来回答问题，请明确告知用户“根据现有知识库，我无法回答这个问题”，不要编造信息。
+        4. 保持回答的专业性和准确性。
 
-        上下文:
+        上下文信息:
         {context}
 
-        问题: 
+        用户问题: 
         {question}
 
-        回答:
+        专业回答:
         """
         prompt = ChatPromptTemplate.from_template(template)
 
@@ -48,7 +48,7 @@ class ChatAgent:
         ollama_llm = ChatOllama(
             model=self.model_name,
             base_url=self.base_url,
-            temperature=0.05  # 控制创造性，值越低越保守
+            temperature=0.2  # 控制创造性，值越低越保守
         )
 
         # 3. 构建处理链
