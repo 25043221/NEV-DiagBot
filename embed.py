@@ -28,13 +28,27 @@ def create_db() -> None:
     if chromadb_connection.count() > 0:
         print("数据库已存在，跳过创建。")
         return
-    for idx, text in enumerate(get_text_chunks()):
-        vector = embed_text(text)
-        chromadb_connection.add(
-            ids=str(idx),  # 使用文本本身作为ID
-            documents=[text],  #原文
-            embeddings=[vector],  #原文的embedding
-        )
+    document_chunks = get_text_chunks()
+
+    ids = []
+    docs_to_embed = []
+    metadatas = []
+
+    for idx, chunk in enumerate(document_chunks):
+        ids.append(str(idx))
+        docs_to_embed.append(chunk.page_content)
+        metadatas.append(chunk.metadata)  # Get metadata from the Document object
+
+    # Embed all documents at once
+    embedded_vectors = embedding.embed_documents(docs_to_embed)
+
+    # Add to the database with metadata
+    chromadb_connection.add(
+        ids=ids,
+        documents=docs_to_embed,
+        embeddings=embedded_vectors,
+        metadatas=metadatas  # <-- This is the crucial addition
+    )
     print("数据库创建成功，已存储嵌入向量。")
 
 def query_db(query: str, n_results: int = 3) -> dict:

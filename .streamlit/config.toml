@@ -1,0 +1,2 @@
+[server]
+folderWatchBlacklist = ['torch', 'sentence_transformers']

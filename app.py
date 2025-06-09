@@ -64,10 +64,19 @@ if "session_id" not in st.session_state:
 if "messages" not in st.session_state:
     st.session_state.messages = [{"role": "assistant", "content": "您好！我是您的专属新能源汽车助手。请问关于您的爱车，有什么可以帮您的吗？比如，您有什么故障码需要查询，或者想了解某个功能？"}]
 
-# --- 新增：用于存储被选中的示例问题 ---
+# --- 用于存储被选中的示例问题 ---
 if "selected_example_question" not in st.session_state:
     st.session_state.selected_example_question = None
 
+if "current_fault_code_input" not in st.session_state:
+    st.session_state.current_fault_code_input = ""
+
+def query_fault_code_callback():
+    fault_code_to_query = st.session_state.fault_code_input_widget_key
+    if fault_code_to_query:
+        st.session_state.selected_example_question = fault_code_to_query + "是什么意思？"
+        st.session_state.fault_code_input_widget_key = ""
+    # st.rerun() # Rerun here after state is updated
 
 # --- 5. 侧边栏与示例问题 (提升用户体验) ---
 with st.sidebar:
@@ -91,17 +100,16 @@ with st.sidebar:
         if st.button(q, key=f"example_q_{i}"):
             st.session_state.selected_example_question = q
             # 立即重新运行应用，确保示例问题被处理
-            st.rerun() #
+            st.rerun()
 
     st.subheader("🛠️ 故障码快速查询")
-    st.text_input("在这里输入故障码 (如 P0420)", key="fault_code_input",
-                   placeholder="例如：P0420")
-    if st.session_state.fault_code_input:
-        # 为故障码查询按钮添加一个唯一的 key
-        if st.button("查询故障码", key="query_fault_code_button"):
-            st.session_state.selected_example_question = st.session_state.fault_code_input + "是什么意思？"
-            st.session_state.fault_code_input = "" # 清空输入字段
-            st.rerun() #
+    st.text_input(
+        "在这里输入故障码 (如 P0420)",
+        key="fault_code_input_widget_key",  # Changed key name
+        placeholder="例如：P0420",
+        value=st.session_state.current_fault_code_input  # This value is now dynamically controlled
+    )
+    st.button("查询故障码", key="query_fault_code_button", on_click=query_fault_code_callback)
 
     st.markdown("---")
     st.header("🧠 参考上下文")

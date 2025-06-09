@@ -26,15 +26,16 @@ def get_pdf_text():
             loaders.append(TextLoader(file_path, encoding='utf-8'))
 
     texts = []
-    for loader in loaders: texts.extend(loader.load())
+    for loader in loaders:
+        texts.extend(loader.load())
     return texts
 
 
 # 拆分文本
 def get_text_chunks():
-    content = get_pdf_text()
-    full_text = "\n".join(doc.page_content for doc in content)
-    chunks = RecursiveCharacterTextSplitter(chunk_size=256, chunk_overlap=50).split_text(full_text)
+    docs = get_pdf_text()
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1024, chunk_overlap=100)
+    chunks = text_splitter.split_documents(docs)
     return chunks
 
 if __name__ == "__main__":

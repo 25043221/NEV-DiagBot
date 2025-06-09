@@ -14,6 +14,8 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 from embed import query_db
 from load_key import load_key
 
+from sentence_transformers import CrossEncoder
+
 os.environ["TAVILY_API_KEY"] = load_key("TAVILY_API_KEY")
 
 
@@ -29,7 +31,11 @@ class ChatAgent:
         self.model_name = model_name
         self.base_url = base_url
         self.store = {}
+        print("初始化Re-ranking中...")
+        self.reranker = CrossEncoder('BAAI/bge-reranker-base')
+        print("Re-ranking初始化完成.")
         self.chain = self._build_chain()
+
 
     def _get_session_history(self, session_id: str) -> BaseChatMessageHistory:
         """获取或创建会话历史"""
@@ -54,7 +60,6 @@ class ChatAgent:
         )
 
         # 3. 定义Agent的提示模板
-        # 重要的改动：加入MessagesPlaceholder来处理历史消息和工具使用
         prompt = ChatPromptTemplate.from_messages(
             [
                 ("system", """您是一位专业且富有同理心的新能源汽车诊断与知识助手。
@@ -81,6 +86,7 @@ class ChatAgent:
 
                 上下文信息:
                 {context}
+                回答时，如果你的答案基于“上下文信息”，请在相关句子末尾使用 [来源: 页码 X] 的格式进行引用。
                 """),
                 MessagesPlaceholder(variable_name="chat_history"),
                 ("human", "{question}"),
@@ -104,36 +110,75 @@ class ChatAgent:
         )
         return chain_with_history
 
-    def rag_chat(self, question: str, session_id: str, n_results: int = 5) -> Dict[str, Any]:
+    def rag_chat(self, question: str, session_id: str, n_results: int = 3) -> Dict[str, Any]:
         """
-        完整的RAG聊天流程，并提供详细的来源信息。
-        现在支持多轮对话和工具调用。
+        完整的RAG聊天流程，集成了重排机制以提高上下文精度。
         """
-        # 1. 从向量库检索相关上下文
-        retrieved_results = query_db(question, n_results)
-        context_docs = retrieved_results["documents"][0]
-        context_metadatas = retrieved_results["metadatas"][0]
+        # --- 重排流程开始 ---
+        initial_retrieval_count = 10
+        print(f"向量检索中，获取 {initial_retrieval_count} 个候选文档...")
+        retrieved_results = query_db(question, n_results=initial_retrieval_count)
 
+        initial_docs = retrieved_results["documents"][0]
+        initial_metadatas = retrieved_results.get("metadatas", [[]])[0]
 
-        # 2. 将上下文信息加入到Agent的输入中
+        # 如果没有检索到任何文档，则直接跳过重排。
+        if not initial_docs:
+            print("未能从知识库检索到任何相关文档。")
+            final_context_docs = []
+            formatted_context = "无"
+        else:
+            # 重排器需要成对的 `[query, document]` 列表。
+            print("准备重排数据...")
+            rerank_pairs = []
+            for doc in initial_docs:
+                rerank_pairs.append([question, doc])
+
+            # 使用重排模型计算相关性得分。
+            print("计算相关性得分...")
+            scores = self.reranker.predict(rerank_pairs)
+
+            # 将文档、元数据和分数合并，并按分数降序排序。
+            # 我们将元数据与文档绑定，以防排序后信息错乱。
+            print("按相关性得分排序...")
+            docs_with_scores_and_metadata = list(zip(initial_docs, initial_metadatas, scores))
+            docs_with_scores_and_metadata.sort(key=lambda x: x[2], reverse=True)
+
+            # 筛选出重排后得分最高的n_results个文档作为最终上下文。
+            print(f"筛选出得分最高的 {n_results} 个文档。")
+            final_docs_with_metadata = docs_with_scores_and_metadata[:n_results]
+
+            # 从排序后的结果中分离出最终的文档和元数据
+            final_context_docs = [item[0] for item in final_docs_with_metadata]
+            final_metadatas = [item[1] for item in final_docs_with_metadata]
+
+            # 准备最终给大模型的、带有来源信息的上下文文本。
+            formatted_context_list = []
+            for i, doc in enumerate(final_context_docs):
+                metadata = final_metadatas[i] or {}  # 确保metadata不是None
+                source = metadata.get('source', '未知文档')
+                page = metadata.get('page', 'N/A')
+                formatted_context_list.append(
+                    f"内容片段 {i + 1} (来源: {os.path.basename(source)}, 页码 {page}):\n{doc}")
+
+            formatted_context = "\n\n".join(formatted_context_list)
+        # --- 重排流程结束 ---
+        # 将重排并筛选后的、最相关的上下文信息加入到Agent的输入中。
         inputs = {
             "question": question,
-            "context": "\n\n".join(context_docs)  # 将检索到的文档作为上下文传递
+            "context": formatted_context
         }
 
-        # 3. 调用支持多轮对话和工具的Agent
-        # 这里直接调用带有历史记录的链，它会内部处理agent的执行
+        # 调用支持多轮对话和工具的Agent
         response = self.chain.invoke(inputs, config={"configurable": {"session_id": session_id}})
 
-        # 4. 构建更丰富的来源信息
-        sources = ["来源: 本地知识库"] if context_docs else []
+        # 构建更丰富的来源信息
+        sources = ["来源: 本地知识库"] if final_context_docs else []
         unique_sources = list(set(sources))
-
-
         return {
             "question": question,
-            "answer": response.get("output", "无法获取回答。"),  # AgentExecutor的输出在'output'键中
-            "context": context_docs,
+            "answer": response.get("output", "无法获取回答。"),
+            "context": final_context_docs,  # 返回经过重排的上下文，便于调试和展示
             "sources": unique_sources
         }
 
