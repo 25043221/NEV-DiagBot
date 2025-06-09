@@ -21,7 +21,6 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 #     content = read_data()
 #     chunks = RecursiveCharacterTextSplitter(chunk_size=256, chunk_overlap=50).split_text(content)
 #     return chunks
-
 #
 # if __name__ == "__main__":
 #     data = read_data()
@@ -166,7 +165,6 @@ def chunk_multimodal_content(
             final_nomic_chunks.append(current_interleaved_chunk)
 
     return final_nomic_chunks
-
 
 # --- 使用示例 ---
 if __name__ == "__main__":

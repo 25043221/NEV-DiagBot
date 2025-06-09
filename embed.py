@@ -74,7 +74,7 @@
 
 #第二版-采用DC1LEX/nomic-embed-text-v1.5-multimodal:latest模型
 import chromadb
-from langchain_ollama import OllamaEmbeddings  # Use OllamaEmbeddings for local Ollama models
+from langchain_ollama import OllamaEmbeddings
 from PIL import Image
 from typing import List, Any, Dict, Union
 import chunk
@@ -83,12 +83,9 @@ import io
 import os
 
 # --- Ollama-hosted Nomic Embeddings Initialization ---
-# Ensure the model name exactly matches what you pulled in Ollama.
-# For Nomic Embed Multimodal, it's typically 'nomic-embed-multimodal'.
-# The base_url should point to your local Ollama server.
 embedding = OllamaEmbeddings(
-    model="DC1LEX/nomic-embed-text-v1.5-multimodal:latest",  # Or whatever the exact model name is in your Ollama setup
-    base_url="http://localhost:11434"  # Default Ollama URL
+    model="DC1LEX/nomic-embed-text-v1.5-multimodal:latest",
+    base_url="http://localhost:11434"
 )
 
 # --- 新增辅助函数：PIL Image 转 Base64 字符串 ---
@@ -99,7 +96,6 @@ def _pil_image_to_base64(image: Image.Image, format="jpeg") -> str:
     """
     buffered = io.BytesIO()
     image.save(buffered, format=format)
-    # 通常，多模态模型期望 Base64 字符串带有 MIME 类型前缀
     return f"data:image/{format};base64,{base64.b64encode(buffered.getvalue()).decode('utf-8')}"
 
 
@@ -141,23 +137,17 @@ def embed_multimodal_chunk(multimodal_chunk_data: List[Union[str, Image.Image]])
             if isinstance(item, str):
                 combined_content_for_embedding.append(item)
             elif isinstance(item, Image.Image):
-                # 将 PIL Image 转换为 Base64 字符串并添加到内容中
                 base64_image_str = _pil_image_to_base64(item)
                 combined_content_for_embedding.append(base64_image_str)
 
-        # 将所有文本和Base64图像字符串拼接成一个完整的文档字符串
-        # 换行符可以作为不同部分的分隔符
         final_document_string_for_embedding = "\n".join(combined_content_for_embedding).strip()
 
-        # 确保传递给 embed_documents 的是 ['一个完整的字符串']
         embeddings = embedding.embed_documents(
             [final_document_string_for_embedding]
         )
-        # embed_documents 返回的是一个列表的列表，我们取第一个列表中的第一个向量
         return embeddings[0]
     except Exception as e:
         print(f"Warning: 嵌入多模态切片时发生错误: {e}")
-        # 如果嵌入失败，返回空列表
         return []
 
 
@@ -172,7 +162,6 @@ def embed_query_text(query: str) -> List[float]:
         List[float]: 嵌入后的查询向量。
     """
     try:
-        # For query, embed_query takes a single string.
         return embedding.embed_query(query)
     except Exception as e:
         print(f"Warning: 嵌入查询文本时发生错误: {e}")
@@ -190,7 +179,7 @@ def create_db(pdf_path: str) -> None:
 
     print("开始切分PDF内容为多模态块...")
     multimodal_chunks = chunk.chunk_multimodal_content(
-        pdf_path,
+        pdf_path, # 传递pdf_path
         max_chunk_text_length=700,
         text_chunk_overlap=100,
         layout_proximity_threshold=60
@@ -210,11 +199,23 @@ def create_db(pdf_path: str) -> None:
             print(f"Warning: 无法为切片 {idx} 生成嵌入向量，跳过。")
             continue
 
+        # 尝试从chunk中获取页码信息并存储到metadata中
+        # 假设chunk.py的extract_elements_with_bbox会为每个元素添加'page_num'
+        # 我们可以尝试从multi_chunk的第一个元素中获取页码
+        page_num = -1
+        if multi_chunk and hasattr(multi_chunk[0], 'page_num'): # 假设这里可以访问到原始的带有page_num的元素
+             # 注意：由于multi_chunk现在是Union[str, Image.Image]的列表，
+             # 直接从其中的元素获取page_num可能需要额外的处理
+             # 更合理的做法是在chunk.py生成multimodal_chunks时就将page_num作为metadata的一部分
+             # 或者在convert_multimodal_chunk_to_string中将page_num编码进document_string
+             # 这里先简化处理，如果能从metadata中获取，就在metadata中添加
+            pass # 在这里暂时不处理，因为chunk.py的输出结构需要调整才能方便获取页码
+
         chromadb_collection.add(
             ids=str(idx),
             documents=[document_string],
             embeddings=[vector],
-            # metadatas=[{'has_image': any(isinstance(item, Image.Image) for item in multi_chunk)}]
+            metadatas=[{'page_num': multi_chunk[0].get('page_num', 'N/A') if isinstance(multi_chunk[0], dict) else 'N/A'}] # 假设multi_chunk的元素是字典
         )
         if (idx + 1) % 50 == 0:
             print(f"已处理 {idx + 1}/{len(multimodal_chunks)} 个切片。")
@@ -227,7 +228,7 @@ def query_db(query: str, n_results: int = 3) -> dict:
     """
     查询ChromaDB，并返回文档及其元数据。
     """
-    query_embed = embed_query_text(query)  # Use the OllamaEmbeddings client for query
+    query_embed = embed_query_text(query)
     if not query_embed:
         print("查询嵌入失败，无法进行查询。")
         return {"ids": [], "distances": [], "documents": [], "metadatas": []}
@@ -244,13 +245,10 @@ def query_db(query: str, n_results: int = 3) -> dict:
 if __name__ == "__main__":
     pdf_file_path = "/home/yu/zjh/my_app/data/秦plusDMi用户手册.pdf"
 
-    # Create the database
     create_db(pdf_file_path)
 
-    # Example query
     print("\n--- 执行查询 ---")
     user_query = "充电说明"
-    # Try a query that might relate to visual information, e.g., "仪表盘上红色电池符号代表什么？"
 
     results = query_db(user_query, n_results=5)
 
@@ -259,9 +257,11 @@ if __name__ == "__main__":
         for i in range(len(results['documents'][0])):
             doc_content = results['documents'][0][i]
             dist_score = results['distances'][0][i]
+            meta = results['metadatas'][0][i] # 获取metadata
             print(f"  结果 {i + 1}:")
             print(f"    距离: {dist_score:.4f}")
             print(f"    文档内容: {doc_content[:300]}...")
+            print(f"    元数据: {meta}")
     else:
         print("未找到相关结果。请检查数据库是否已成功创建或查询内容。")
 
