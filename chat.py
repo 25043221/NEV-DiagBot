@@ -1,6 +1,8 @@
+import base64
 import os
 from typing import List, Any, Dict, Union
 
+from langchain_core.messages import HumanMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_ollama import ChatOllama
 from langchain_community.tools import TavilySearchResults
@@ -15,6 +17,8 @@ from embed import query_db
 from load_key import load_key
 
 from sentence_transformers import CrossEncoder
+
+from multimodal_model import MultimodalModel
 
 os.environ["TAVILY_API_KEY"] = load_key("TAVILY_API_KEY")
 
@@ -34,7 +38,10 @@ class ChatAgent:
         print("初始化Re-ranking中...")
         self.reranker = CrossEncoder('BAAI/bge-reranker-base')
         print("Re-ranking初始化完成.")
+        self.multimodal_model = MultimodalModel(model_name="qwen2.5vl:3b", base_url=base_url)
         self.chain = self._build_chain()
+
+
 
 
     def _get_session_history(self, session_id: str) -> BaseChatMessageHistory:
@@ -95,7 +102,6 @@ class ChatAgent:
         )
 
         # 4. 创建可调用工具的Agent
-        # create_tool_calling_agent 自动处理工具调用逻辑
         agent = create_tool_calling_agent(llm, tools, prompt)
 
         # 5. 创建Agent执行器
@@ -106,14 +112,22 @@ class ChatAgent:
             agent_executor,
             self._get_session_history,
             input_messages_key="question",
-            history_messages_key="chat_history",  # 确保与prompt中的variable_name匹配
+            history_messages_key="chat_history",
         )
         return chain_with_history
 
-    def rag_chat(self, question: str, session_id: str, n_results: int = 3) -> Dict[str, Any]:
+    def rag_chat(self, question: str, session_id: str, n_results: int = 3, image_bytes: bytes = None) -> Dict[str, Any]:
         """
         完整的RAG聊天流程，集成了重排机制以提高上下文精度。
+        支持多模态的输入
         """
+        if image_bytes:
+            image_description = self.multimodal_model.describe_image(image_bytes)
+            if question.strip() == "请分析这张图片。":  # Check if it's the default prompt
+                question = f"用户上传了一张图片，描述为：'{image_description}'。"
+            else:
+                question = f"用户上传了一张图片，描述为：'{image_description}'。\n用户的问题是：{question}"
+            print(f"结合图片描述后的问题: {question}")
         # --- 重排流程开始 ---
         initial_retrieval_count = 10
         print(f"向量检索中，获取 {initial_retrieval_count} 个候选文档...")
@@ -139,7 +153,7 @@ class ChatAgent:
             scores = self.reranker.predict(rerank_pairs)
 
             # 将文档、元数据和分数合并，并按分数降序排序。
-            # 我们将元数据与文档绑定，以防排序后信息错乱。
+            # 将元数据与文档绑定，以防排序后信息错乱。
             print("按相关性得分排序...")
             docs_with_scores_and_metadata = list(zip(initial_docs, initial_metadatas, scores))
             docs_with_scores_and_metadata.sort(key=lambda x: x[2], reverse=True)
@@ -163,9 +177,16 @@ class ChatAgent:
 
             formatted_context = "\n\n".join(formatted_context_list)
         # --- 重排流程结束 ---
+        human_message_content = [{"type": "text", "text": question}]
+
+        session_history = self._get_session_history(session_id)
+        chat_history = session_history.messages
+
+        new_human_message = HumanMessage(content=human_message_content)
+
         # 将重排并筛选后的、最相关的上下文信息加入到Agent的输入中。
         inputs = {
-            "question": question,
+            "question": new_human_message,
             "context": formatted_context
         }
 

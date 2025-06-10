@@ -1,9 +1,12 @@
+import io
 import time
 from typing import Iterator
 
 import streamlit as st
 import os
 import uuid
+
+from PIL import Image
 
 from chat import ChatAgent
 from embed import create_db, query_db
@@ -17,7 +20,7 @@ st.set_page_config(
 
 # --- 2. 应用标题和介绍 (领域适配) ---
 st.title("🚗 新能源汽车智能诊断与知识助手")
-st.caption("由本地大模型驱动，为您解答关于新能源汽车的使用、保养及故障诊断问题。")
+st.caption("由本地大模型驱动，为您解答关于新能源汽车的使用、保养及故障诊断问题")
 st.markdown("---")
 
 # --- 后端初始化 ---
@@ -62,7 +65,8 @@ if "session_id" not in st.session_state:
     st.session_state.session_id = str(uuid.uuid4())
 
 if "messages" not in st.session_state:
-    st.session_state.messages = [{"role": "assistant", "content": "您好！我是您的专属新能源汽车助手。请问关于您的爱车，有什么可以帮您的吗？比如，您有什么故障码需要查询，或者想了解某个功能？"}]
+    st.session_state.messages = [{"role": "assistant",
+                                  "content": "您好！我是您的专属新能源汽车助手。请问关于您的爱车，有什么可以帮您的吗？比如，您有什么故障码需要查询，或者想了解某个功能？"}]
 
 # --- 用于存储被选中的示例问题 ---
 if "selected_example_question" not in st.session_state:
@@ -70,6 +74,9 @@ if "selected_example_question" not in st.session_state:
 
 if "current_fault_code_input" not in st.session_state:
     st.session_state.current_fault_code_input = ""
+
+if "uploaded_image" not in st.session_state:
+    st.session_state.uploaded_image = None
 
 def query_fault_code_callback():
     fault_code_to_query = st.session_state.fault_code_input_widget_key
@@ -105,11 +112,20 @@ with st.sidebar:
     st.subheader("🛠️ 故障码快速查询")
     st.text_input(
         "在这里输入故障码 (如 P0420)",
-        key="fault_code_input_widget_key",  # Changed key name
+        key="fault_code_input_widget_key",
         placeholder="例如：P0420",
         value=st.session_state.current_fault_code_input  # This value is now dynamically controlled
     )
     st.button("查询故障码", key="query_fault_code_button", on_click=query_fault_code_callback)
+
+    st.subheader("📸 上传图片进行诊断")
+    uploaded_file = st.file_uploader("选择一张图片...", type=["jpg", "jpeg", "png"])
+
+    if uploaded_file is not None:
+        st.session_state.uploaded_image = uploaded_file.read() # Read image as bytes
+        image = Image.open(io.BytesIO(st.session_state.uploaded_image)) # Open image from bytes
+        st.image(image, caption='已上传的图片', use_container_width=True)
+        st.success("图片上传成功！")
 
     st.markdown("---")
     st.header("🧠 参考上下文")
@@ -127,10 +143,14 @@ with st.sidebar:
     """)
 
 
-# --- 6. 聊天界面渲染 (保持不变) ---
+# --- 6. 聊天界面渲染 ---
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
-        st.markdown(message["content"])
+        if isinstance(message["content"], dict) and "text" in message["content"] and "image" in message["content"]:
+            st.markdown(message["content"]["text"])
+            st.image(Image.open(io.BytesIO(message["content"]["image"])), caption="用户上传图片", use_container_width=True)
+        else:
+            st.markdown(message["content"])
 
 
 # --- 7. 用户输入处理与 RAG 流程 (核心重构) ---
@@ -139,23 +159,34 @@ user_input_prompt = st.chat_input("请在这里描述您的问题...")
 
 # 确定最终要处理的 prompt
 prompt = None
+image_to_process = None
 # 优先处理通过示例问题或故障码设置的 session_state 变量
 if st.session_state.selected_example_question:
     prompt = st.session_state.selected_example_question
-    st.session_state.selected_example_question = None # 使用后立即清除，以便下一次点击
-elif user_input_prompt: # 如果没有示例问题，则检查用户是否直接输入
+    st.session_state.selected_example_question = None # Clear after use
+elif user_input_prompt: # Otherwise, check for direct user input
     prompt = user_input_prompt
 
+if st.session_state.uploaded_image:
+    image_to_process = st.session_state.uploaded_image
+    # 如果用户没有设置提示次，直接默认
+    if not prompt:
+        prompt = "请分析这张图片。"
 
 if prompt:
-    st.session_state.messages.append({"role": "user", "content": prompt})
+    user_message_content = {"text": prompt}
+    if image_to_process:
+        user_message_content["image"] = image_to_process
+    st.session_state.messages.append({"role": "user", "content": user_message_content})
     with st.chat_message("user"):
         st.markdown(prompt)
+        if image_to_process:
+            st.image(Image.open(io.BytesIO(image_to_process)), caption="用户上传图片", use_container_width=True)
 
     with st.chat_message("assistant"):
         with st.spinner("正在知识库中检索并思考..."):
             try:
-                response_data = agent.rag_chat(prompt, session_id=st.session_state.session_id, n_results=5)
+                response_data = agent.rag_chat(prompt, session_id=st.session_state.session_id, n_results=5, image_bytes= image_to_process)
                 context_docs = response_data.get("context", [])
                 sources = response_data.get("sources", [])
 
@@ -181,6 +212,8 @@ if prompt:
             except Exception as e:
                 st.error(f"处理问题时出错: {e}")
                 full_response = "抱歉，我在处理您的请求时遇到了问题。请稍后再试。"
+            finally:
+                st.session_state.uploaded_image = None
 
         st.write(full_response)
     st.session_state.messages.append({"role": "assistant", "content": full_response})
