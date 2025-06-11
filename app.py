@@ -28,7 +28,11 @@ st.markdown("---")
 def get_chat_agent():
     """加载并缓存 ChatAgent 实例"""
     print("正在初始化 ChatAgent...")
-    return ChatAgent(model_name="qwen3:4B")
+    return ChatAgent(local_model_name_via_oneapi="qwen3:4B", # 确保与 One API 配置的 Ollama 渠道模型名称一致
+        intent_model_name="qwen3:0.6b",             # 意图识别的本地 Ollama 模型
+        online_model_name_via_oneapi="deepseek-chat",    # 确保与 One API 配置的在线模型渠道模型名称一致
+        ollama_base_url="http://localhost:11434"   # 本地 Ollama 服务的基础 URL
+    )
 
 
 @st.cache_resource
@@ -83,7 +87,7 @@ def query_fault_code_callback():
     if fault_code_to_query:
         st.session_state.selected_example_question = fault_code_to_query + "是什么意思？"
         st.session_state.fault_code_input_widget_key = ""
-    # st.rerun() # Rerun here after state is updated
+    # st.rerun()
 
 # --- 5. 侧边栏与示例问题 (提升用户体验) ---
 with st.sidebar:

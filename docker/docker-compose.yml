@@ -1,0 +1,30 @@
+version: '3.8'
+
+
+services:
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    restart: always
+    ports:
+      - "11435:11434"
+    volumes:
+      - /usr/share/ollama/.ollama:/root/.ollama
+    environment:
+      - OLLAMA_HOST=0.0.0.0
+
+
+  one-api:
+    image: justsong/one-api
+    container_name: one-api
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./one_api_data:/data
+    environment:
+      - TZ=Asia/Shanghai
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+

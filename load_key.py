@@ -40,7 +40,10 @@ def load_key(keyname: str) -> object:
             json.dump(Key, file, indent=4)
         return keyval
 
+if __name__ == "__main__":
+    one_api_base_url = load_key("ONE_API_BASE_URL")
+    one_api_key = load_key("ONE_API_KEY")
+    print(f"ONE_API_BASE_URL: {one_api_base_url}")
+    print(f"ONE_API_KEY: {one_api_key}")
+    print(load_key("TAVILY_API_KEY"))
 
-# if __name__ == "__main__":
-#     # 测试示例：获取LANGSMITH_API_KEY
-#     print(load_key("TAVILY_API_KEY"))

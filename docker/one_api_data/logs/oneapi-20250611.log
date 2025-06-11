@@ -1,0 +1,700 @@
+[INFO] 2025/06/11 - 13:49:55 | main.go:32 [main] One API v0.6.11-preview.7 started 
+[INFO] 2025/06/11 - 13:49:55 | model/main.go:103 [openSQLite] SQL_DSN not set, using SQLite as database 
+[INFO] 2025/06/11 - 13:49:55 | model/main.go:129 [InitDB] database migration started 
+[INFO] 2025/06/11 - 13:49:55 | model/main.go:134 [InitDB] database migrated 
+[INFO] 2025/06/11 - 13:49:55 | model/main.go:28 [CreateRootAccountIfNeed] no user exists, creating a root user for you: username is root, password is 123456 
+[INFO] 2025/06/11 - 13:49:55 | common/redis.go:20 [InitRedisClient] REDIS_CONN_STRING not set, Redis is not enabled 
+[INFO] 2025/06/11 - 13:49:55 | main.go:65 [main] using theme default 
+[INFO] 2025/06/11 - 13:49:55 | relay/adaptor/openai/token.go:23 [InitTokenEncoders] initializing token encoders 
+[INFO] 2025/06/11 - 13:51:13 | main.go:32 [main] One API v0.6.11-preview.7 started 
+[INFO] 2025/06/11 - 13:51:13 | model/main.go:103 [openSQLite] SQL_DSN not set, using SQLite as database 
+[INFO] 2025/06/11 - 13:51:13 | model/main.go:129 [InitDB] database migration started 
+[INFO] 2025/06/11 - 13:51:13 | model/main.go:134 [InitDB] database migrated 
+[INFO] 2025/06/11 - 13:51:13 | common/redis.go:20 [InitRedisClient] REDIS_CONN_STRING not set, Redis is not enabled 
+[INFO] 2025/06/11 - 13:51:13 | main.go:65 [main] using theme default 
+[INFO] 2025/06/11 - 13:51:13 | relay/adaptor/openai/token.go:23 [InitTokenEncoders] initializing token encoders 
+[INFO] 2025/06/11 - 13:51:42 | relay/adaptor/openai/token.go:49 [InitTokenEncoders] token encoders initialized 
+[INFO] 2025/06/11 - 13:51:42 | main.go:119 [main] server started on http://localhost:3000 
+[GIN] 2025/06/11 - 13:52:42 | 2025061113524299348445124818536 | 401 |     274.661µs |      172.19.0.1 |     GET /api/channel/2
+[GIN] 2025/06/11 - 13:52:42 | 2025061113524299365838747688421 | 401 |     336.994µs |      172.19.0.1 |     GET /api/channel/models
+[GIN] 2025/06/11 - 13:52:42 | 2025061113524299633933039089771 | 401 |        75.9µs |      172.19.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 13:52:43 | 20250611135243806211688299858 | 200 |     144.057µs |      172.19.0.1 |     GET /login?expired=true
+[GIN] 2025/06/11 - 13:52:43 | 202506111352431153285143930720 | 200 |      88.836µs |      172.19.0.1 |     GET /login?expired=true
+[GIN] 2025/06/11 - 13:52:43 | 202506111352431347537124186082 | 200 |      94.458µs |      172.19.0.1 |     GET /login?expired=true
+[GIN] 2025/06/11 - 13:52:43 | 202506111352439574619399800477 | 200 |     102.961µs |      172.19.0.1 |     GET /api/status
+[GIN] 2025/06/11 - 13:52:44 | 202506111352449355461148473518 | 200 |   46.508346ms |      172.19.0.1 |    POST /api/user/login
+[GIN] 2025/06/11 - 13:52:45 | 2025061113524567844096384763325 | 200 |   45.717034ms |      172.19.0.1 |    POST /api/user/login
+[GIN] 2025/06/11 - 13:52:48 | 2025061113524891050713311577692 | 200 |   46.296648ms |      172.19.0.1 |    POST /api/user/login
+[GIN] 2025/06/11 - 13:52:54 | 202506111352542640512794357175 | 200 |   43.595126ms |      172.19.0.1 |    POST /api/user/login
+[GIN] 2025/06/11 - 13:53:02 | 202506111353024758047718606888 | 401 |     448.636µs |      172.19.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 13:53:02 | 202506111353027405865654231449 | 200 |     112.164µs |      172.19.0.1 |     GET /login?expired=true
+[GIN] 2025/06/11 - 13:53:02 | 2025061113530212813994449406517 | 200 |      91.371µs |      172.19.0.1 |     GET /api/status
+[GIN] 2025/06/11 - 13:53:02 | 2025061113530293535490996142308 | 401 |     409.829µs |      172.19.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 13:53:02 | 2025061113530293943661930315048 | 401 |     437.477µs |      172.19.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 13:53:02 | 2025061113530296280355780183757 | 200 |      89.611µs |      172.19.0.1 |     GET /login?expired=true
+[GIN] 2025/06/11 - 13:53:02 | 2025061113530296597702030808017 | 200 |      83.851µs |      172.19.0.1 |     GET /login?expired=true
+[GIN] 2025/06/11 - 13:53:03 | 202506111353032610140093101435 | 200 |      88.032µs |      172.19.0.1 |     GET /api/status
+[GIN] 2025/06/11 - 13:53:04 | 202506111353048169950521688858 | 200 |   46.267794ms |      172.19.0.1 |    POST /api/user/login
+[GIN] 2025/06/11 - 13:53:05 | 2025061113530510085152084154505 | 200 |    45.01054ms |      172.19.0.1 |    POST /api/user/login
+[GIN] 2025/06/11 - 13:53:05 | 2025061113530526613821897921416 | 200 |   44.413569ms |      172.19.0.1 |    POST /api/user/login
+[GIN] 2025/06/11 - 13:53:05 | 2025061113530541886823101727648 | 200 |   47.428176ms |      172.19.0.1 |    POST /api/user/login
+[GIN] 2025/06/11 - 13:53:05 | 2025061113530561574223459948316 | 200 |   43.999731ms |      172.19.0.1 |    POST /api/user/login
+[GIN] 2025/06/11 - 13:53:11 | 2025061113531149073673688768706 | 200 |   46.077377ms |      172.19.0.1 |    POST /api/user/login
+[GIN] 2025/06/11 - 13:53:56 | 2025061113535616267402105240052 | 200 |     191.269µs |      172.19.0.1 |     GET /
+[GIN] 2025/06/11 - 13:53:56 | 2025061113535622312131635275110 | 200 |      96.393µs |      172.19.0.1 |     GET /api/status
+[GIN] 2025/06/11 - 13:53:56 | 2025061113535623082539022737744 | 200 |      61.023µs |      172.19.0.1 |     GET /api/notice
+[GIN] 2025/06/11 - 13:53:56 | 2025061113535623086736599764774 | 200 |     187.889µs |      172.19.0.1 |     GET /api/home_page_content
+[GIN] 2025/06/11 - 13:53:58 | 2025061113535871080568318055803 | 401 |      111.28µs |      172.19.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 13:53:58 | 2025061113535871094722489673544 | 401 |     242.274µs |      172.19.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 13:53:58 | 2025061113535872292262786264732 | 200 |     283.725µs |      172.19.0.1 |     GET /login?expired=true
+[GIN] 2025/06/11 - 13:53:58 | 2025061113535872771168010365782 | 200 |      90.667µs |      172.19.0.1 |     GET /login?expired=true
+[GIN] 2025/06/11 - 13:53:58 | 2025061113535875873462080156361 | 200 |     124.103µs |      172.19.0.1 |     GET /api/status
+[GIN] 2025/06/11 - 13:54:03 | 2025061113540339746239960190352 | 200 |   43.910247ms |      172.19.0.1 |    POST /api/user/login
+[GIN] 2025/06/11 - 13:54:03 | 2025061113540344719839262329004 | 200 |     392.177µs |      172.19.0.1 |     GET /api/user/self
+[GIN] 2025/06/11 - 13:54:12 | 202506111354126037799447906502 | 200 |   48.016578ms |      172.19.0.1 |     PUT /api/user/self
+[GIN] 2025/06/11 - 13:54:14 | 2025061113541476352577481925836 | 200 |     290.416µs |      172.19.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 13:54:15 | 2025061113541597477810324301166 | 200 |    1.208951ms |      172.19.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 13:54:15 | 2025061113541597899821908081440 | 200 |     530.484µs |      172.19.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 13:54:17 | 2025061113541742810625960793756 | 200 |      88.069µs |      172.19.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 13:54:17 | 2025061113541742792494039874124 | 200 |    2.263939ms |      172.19.0.1 |     GET /api/channel/models
+[GIN] 2025/06/11 - 13:54:28 | 2025061113542893544855218616081 | 200 |    6.227227ms |      172.19.0.1 |    POST /api/channel/
+[GIN] 2025/06/11 - 13:54:30 | 2025061113543080889385267406243 | 200 |     993.684µs |      172.19.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 13:54:30 | 2025061113543081003732349024476 | 200 |    2.835315ms |      172.19.0.1 |     GET /api/models
+[INFO] 2025/06/11 - 13:54:31 | controller/channel-test.go:131 [testChannel] {"messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"model":"deepseek-chat"} 
+[INFO] 2025/06/11 - 13:54:35 | controller/channel-test.go:165 [testChannel] testing channel #1, response: 
+{"id":"247b19c5-d9e1-416a-902a-e9e84389b297","object":"chat.completion","created":1749621269,"model":"deepseek-chat","choices":[{"index":0,"message":{"role":"assistant","content":"DeepSeek-V3"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":14,"completion_tokens":5,"total_tokens":19,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":14},"system_fingerprint":"fp_8802369eaa_prod0425fp8"} 
+[GIN] 2025/06/11 - 13:54:35 | 2025061113543181117796011383602 | 200 |  4.084826841s |      172.19.0.1 |     GET /api/channel/test/1?model=deepseek-chat
+[INFO] 2025/06/11 - 13:54:35 | 2025061113543181117796011383602 | model/log.go:51 [recordLogHelper] record log: &{Id:1 UserId:0 CreatedAt:1749621275 Type:5 Content:渠道 deepseek 测试成功，响应：DeepSeek-V3 Username: TokenName: ModelName:deepseek-chat Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:1 RequestId:2025061113543181117796011383602 ElapsedTime:4084 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 13:54:38 | 2025061113543886916976852341855 | 200 |      84.911µs |      172.19.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 13:54:38 | 2025061113543886897855648344265 | 200 |    2.254414ms |      172.19.0.1 |     GET /api/channel/models
+[GIN] 2025/06/11 - 13:54:59 | 2025061113545971782920128777159 | 200 |    5.240175ms |      172.19.0.1 |    POST /api/channel/
+[GIN] 2025/06/11 - 13:55:02 | 2025061113550211302582079943493 | 200 |    1.769457ms |      172.19.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 13:55:02 | 2025061113550211381496302663842 | 200 |    1.346848ms |      172.19.0.1 |     GET /api/models
+[INFO] 2025/06/11 - 13:55:03 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 13:55:03 | 2025061113550311961617286967534 | 200 |    2.980832ms |      172.19.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 13:55:03 | 2025061113550311961617286967534 | model/log.go:51 [recordLogHelper] record log: &{Id:2 UserId:0 CreatedAt:1749621303 Type:5 Content:渠道 ollama 测试失败，错误：http status code: 404 Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061113550311961617286967534 ElapsedTime:1 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 13:55:05 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 13:55:05 | 202506111355054771302420764861 | 200 |    2.525627ms |      172.19.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 13:55:05 | 202506111355054771302420764861 | model/log.go:51 [recordLogHelper] record log: &{Id:3 UserId:0 CreatedAt:1749621305 Type:5 Content:渠道 ollama 测试失败，错误：http status code: 404 Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:202506111355054771302420764861 ElapsedTime:1 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 13:55:07 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 13:55:07 | 2025061113550755998214462401467 | 200 |    2.106176ms |      172.19.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 13:55:07 | 2025061113550755998214462401467 | model/log.go:51 [recordLogHelper] record log: &{Id:4 UserId:0 CreatedAt:1749621307 Type:5 Content:渠道 ollama 测试失败，错误：http status code: 404 Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061113550755998214462401467 ElapsedTime:1 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 13:55:08 | 2025061113550840334830326828705 | 200 |    1.218022ms |      172.19.0.1 |     GET /api/log/?p=0&type=0&username=&token_name=&model_name=&start_timestamp=0&end_timestamp=1749624908&channel=
+[GIN] 2025/06/11 - 13:55:59 | 2025061113555971540908188912597 | 200 |      351.51µs |      172.19.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 13:55:59 | 2025061113555971559231871773514 | 200 |     532.517µs |      172.19.0.1 |     GET /api/models
+[INFO] 2025/06/11 - 13:56:00 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 13:56:00 | 2025061113560070608559031896126 | 200 |     814.336µs |      172.19.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 13:56:00 | 2025061113560070608559031896126 | model/log.go:51 [recordLogHelper] record log: &{Id:5 UserId:0 CreatedAt:1749621360 Type:5 Content:渠道 ollama 测试失败，错误：http status code: 404 Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061113560070608559031896126 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 13:56:04 | 2025061113560437975139565893639 | 200 |    1.428062ms |      172.19.0.1 |     GET /api/log/?p=0&type=0&username=&token_name=&model_name=&start_timestamp=0&end_timestamp=1749624964&channel=
+[GIN] 2025/06/11 - 14:15:09 | 2025061114150980434475654240724 | 200 |    3.162873ms |      172.19.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 14:15:09 | 2025061114150980680123219500510 | 200 |    1.506497ms |      172.19.0.1 |     GET /api/models
+[INFO] 2025/06/11 - 14:15:10 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[INFO] 2025/06/11 - 14:15:21 | controller/channel-test.go:165 [testChannel] testing channel #2, response: 
+{"id":"chatcmpl-b95f0483d7d849a28cd6d1cd93e7a53c","model":"qwen3:4B","object":"chat.completion","created":1749622521,"choices":[{"index":0,"message":{"role":"assistant","content":"\u003cthink\u003e\nOkay, the user is asking me to output only my specific model name without any additional text. Let me make sure I understand the request correctly. They want just the name, nothing else. So, I need to recall what my model name is. I think it's Qwen, but I should double-check to avoid any mistakes. Wait, sometimes different models have different names, but in this case, I'm pretty sure it's Qwen. Let me confirm. Yes, my model name is Qwen. Alright, I'll just provide that.\n\u003c/think\u003e\n\nQwen"},"finish_reason":"stop"}],"usage":{"prompt_tokens":19,"completion_tokens":118,"total_tokens":137}} 
+[GIN] 2025/06/11 - 14:15:21 | 2025061114151075171763042434460 | 200 | 10.850494247s |      172.19.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 14:15:21 | 2025061114151075171763042434460 | model/log.go:51 [recordLogHelper] record log: &{Id:6 UserId:0 CreatedAt:1749622521 Type:5 Content:渠道 ollama 测试成功，响应：<think>
+Okay, the user is asking me to output only my specific model name without any additional text. Let me make sure I understand the request correctly. They want just the name, nothing else. So, I need to recall what my model name is. I think it's Qwen, but I should double-check to avoid any mistakes. Wait, sometimes different models have different names, but in this case, I'm pretty sure it's Qwen. Let me confirm. Yes, my model name is Qwen. Alright, I'll just provide that.
+</think>
+
+Qwen Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061114151075171763042434460 ElapsedTime:10849 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 14:15:33 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[INFO] 2025/06/11 - 14:15:44 | controller/channel-test.go:165 [testChannel] testing channel #2, response: 
+{"id":"chatcmpl-f1f13051974842e5b1e425213f344932","model":"qwen3:4B","object":"chat.completion","created":1749622544,"choices":[{"index":0,"message":{"role":"assistant","content":"\u003cthink\u003e\nOkay, the user is asking me to output only my specific model name without any additional text. Let me make sure I understand the request correctly. They want just the name, nothing else. My model name is Qwen, so I should respond with that. I need to check if there's any possible confusion here. Sometimes people might think the model name is different, but no, it's definitely Qwen. I should avoid adding any extra information like version numbers or other details. Just the exact model name. Alright, that's straightforward. Let me confirm once more. The instruction is clear: output only the model name. So the answer is Qwen.\n\u003c/think\u003e\n\nQwen"},"finish_reason":"stop"}],"usage":{"prompt_tokens":19,"completion_tokens":140,"total_tokens":159}} 
+[GIN] 2025/06/11 - 14:15:44 | 2025061114153339213424350419969 | 200 | 10.975273795s |      172.19.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 14:15:44 | 2025061114153339213424350419969 | model/log.go:51 [recordLogHelper] record log: &{Id:7 UserId:0 CreatedAt:1749622544 Type:5 Content:渠道 ollama 测试成功，响应：<think>
+Okay, the user is asking me to output only my specific model name without any additional text. Let me make sure I understand the request correctly. They want just the name, nothing else. My model name is Qwen, so I should respond with that. I need to check if there's any possible confusion here. Sometimes people might think the model name is different, but no, it's definitely Qwen. I should avoid adding any extra information like version numbers or other details. Just the exact model name. Alright, that's straightforward. Let me confirm once more. The instruction is clear: output only the model name. So the answer is Qwen.
+</think>
+
+Qwen Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061114153339213424350419969 ElapsedTime:10974 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 14:17:24 | 2025061114172442412455777024288 | 200 |    1.232891ms |      172.19.0.1 |     GET /api/log/?p=0&type=0&username=&token_name=&model_name=&start_timestamp=0&end_timestamp=1749626244&channel=
+[GIN] 2025/06/11 - 14:35:42 | 2025061114354264690689254622649 | 200 |     761.125µs |      172.19.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 14:35:42 | 2025061114354264688507165287353 | 200 |     853.266µs |      172.19.0.1 |     GET /api/channel/?p=0
+[INFO] 2025/06/11 - 14:35:43 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[INFO] 2025/06/11 - 14:36:04 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[INFO] 2025/06/11 - 14:36:06 | controller/channel-test.go:165 [testChannel] testing channel #2, response: 
+{"id":"chatcmpl-9ca9055fe3c4421cba30f15c79e3e75c","model":"qwen3:4B","object":"chat.completion","created":1749623766,"choices":[{"index":0,"message":{"role":"assistant","content":"\u003cthink\u003e\nOkay, the user is asking me to output only my specific model name without any additional text. Let me make sure I understand the request correctly. They want just the name, nothing else. So, I need to recall what my model name is. I think it's Qwen, but I should double-check to avoid any mistakes. Wait, sometimes different models have different names, but in this case, I'm pretty confident it's Qwen. Let me confirm. Yes, my name is Qwen. Alright, so the answer should be \"Qwen\" and nothing more. I need to make sure I don't add any extra words or explanations. Just the model name. Got it.\n\u003c/think\u003e\n\nQwen"},"finish_reason":"stop"}],"usage":{"prompt_tokens":19,"completion_tokens":147,"total_tokens":166}} 
+[GIN] 2025/06/11 - 14:36:06 | 2025061114354393127953999029423 | 200 | 22.736177924s |      172.19.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 14:36:06 | 2025061114354393127953999029423 | model/log.go:51 [recordLogHelper] record log: &{Id:8 UserId:0 CreatedAt:1749623766 Type:5 Content:渠道 ollama 测试成功，响应：<think>
+Okay, the user is asking me to output only my specific model name without any additional text. Let me make sure I understand the request correctly. They want just the name, nothing else. So, I need to recall what my model name is. I think it's Qwen, but I should double-check to avoid any mistakes. Wait, sometimes different models have different names, but in this case, I'm pretty confident it's Qwen. Let me confirm. Yes, my name is Qwen. Alright, so the answer should be "Qwen" and nothing more. I need to make sure I don't add any extra words or explanations. Just the model name. Got it.
+</think>
+
+Qwen Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061114354393127953999029423 ElapsedTime:22735 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 14:36:12 | 2025061114361282624876084582154 | 200 |     690.538µs |      172.19.0.1 |     GET /api/log/?p=0&type=0&username=&token_name=&model_name=&start_timestamp=0&end_timestamp=1749627372&channel=
+[INFO] 2025/06/11 - 14:36:21 | controller/channel-test.go:165 [testChannel] testing channel #2, response: 
+{"id":"chatcmpl-beb5c997b66f4a9fa4a5264473262aef","model":"qwen3:4B","object":"chat.completion","created":1749623781,"choices":[{"index":0,"message":{"role":"assistant","content":"\u003cthink\u003e\nOkay, the user is asking me to output only my specific model name without any additional text. Let me make sure I understand the request correctly. They want just the name, nothing else. My model name is Qwen, so I should respond with that. But wait, maybe they want the full name or a different identifier? Let me check the instructions again. The user said \"your specific model name,\" and I should confirm that Qwen is the correct name. Yes, Qwen is the name of the model. I need to ensure I don't add any extra information like version numbers or other details. Just the name. Alright, I'll go with Qwen.\n\u003c/think\u003e\n\nQwen"},"finish_reason":"stop"}],"usage":{"prompt_tokens":19,"completion_tokens":143,"total_tokens":162}} 
+[GIN] 2025/06/11 - 14:36:21 | 2025061114360462708110580266101 | 200 | 16.591796893s |      172.19.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 14:36:21 | 2025061114360462708110580266101 | model/log.go:51 [recordLogHelper] record log: &{Id:9 UserId:0 CreatedAt:1749623781 Type:5 Content:渠道 ollama 测试成功，响应：<think>
+Okay, the user is asking me to output only my specific model name without any additional text. Let me make sure I understand the request correctly. They want just the name, nothing else. My model name is Qwen, so I should respond with that. But wait, maybe they want the full name or a different identifier? Let me check the instructions again. The user said "your specific model name," and I should confirm that Qwen is the correct name. Yes, Qwen is the name of the model. I need to ensure I don't add any extra information like version numbers or other details. Just the name. Alright, I'll go with Qwen.
+</think>
+
+Qwen Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061114360462708110580266101 ElapsedTime:16591 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 14:41:36 | main.go:32 [main] One API v0.6.11-preview.7 started 
+[INFO] 2025/06/11 - 14:41:36 | model/main.go:103 [openSQLite] SQL_DSN not set, using SQLite as database 
+[INFO] 2025/06/11 - 14:41:36 | model/main.go:129 [InitDB] database migration started 
+[INFO] 2025/06/11 - 14:41:36 | model/main.go:134 [InitDB] database migrated 
+[INFO] 2025/06/11 - 14:41:36 | common/redis.go:20 [InitRedisClient] REDIS_CONN_STRING not set, Redis is not enabled 
+[INFO] 2025/06/11 - 14:41:36 | main.go:65 [main] using theme default 
+[INFO] 2025/06/11 - 14:41:36 | relay/adaptor/openai/token.go:23 [InitTokenEncoders] initializing token encoders 
+[INFO] 2025/06/11 - 14:42:08 | relay/adaptor/openai/token.go:49 [InitTokenEncoders] token encoders initialized 
+[INFO] 2025/06/11 - 14:42:08 | main.go:119 [main] server started on http://localhost:3000 
+[GIN] 2025/06/11 - 14:42:36 | 2025061114423613966018226492527 | 200 |     191.971µs |      172.20.0.1 |     GET /
+[GIN] 2025/06/11 - 14:42:36 | 2025061114423618282479179580118 | 200 |     152.922µs |      172.20.0.1 |     GET /api/status
+[GIN] 2025/06/11 - 14:42:36 | 2025061114423618712404013086862 | 200 |      55.452µs |      172.20.0.1 |     GET /api/notice
+[GIN] 2025/06/11 - 14:42:36 | 2025061114423618725405829991719 | 200 |       71.52µs |      172.20.0.1 |     GET /api/home_page_content
+[GIN] 2025/06/11 - 14:42:37 | 2025061114423740101883725052052 | 401 |     372.795µs |      172.20.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 14:42:37 | 2025061114423740387578695353909 | 401 |     347.664µs |      172.20.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 14:42:37 | 2025061114423741921556050786367 | 200 |     108.689µs |      172.20.0.1 |     GET /login?expired=true
+[GIN] 2025/06/11 - 14:42:37 | 2025061114423742465621723690718 | 200 |     250.351µs |      172.20.0.1 |     GET /login?expired=true
+[GIN] 2025/06/11 - 14:42:37 | 2025061114423745413687087531163 | 200 |      88.222µs |      172.20.0.1 |     GET /api/status
+[GIN] 2025/06/11 - 14:42:39 | 2025061114423918417088227293572 | 200 |   46.506466ms |      172.20.0.1 |    POST /api/user/login
+[GIN] 2025/06/11 - 14:42:39 | 2025061114423923703614517487518 | 200 |     279.488µs |      172.20.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 14:42:41 | 2025061114424132586935132582422 | 200 |    2.694914ms |      172.20.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 14:42:41 | 2025061114424132690626987268265 | 200 |    2.809716ms |      172.20.0.1 |     GET /api/models
+[INFO] 2025/06/11 - 14:42:42 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 14:42:42 | 2025061114424274979195313186841 | 200 |      561.78µs |      172.20.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 14:42:42 | 2025061114424274979195313186841 | model/log.go:51 [recordLogHelper] record log: &{Id:10 UserId:0 CreatedAt:1749624162 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://host.docker.internal:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061114424274979195313186841 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 14:44:01 | 2025061114440136130297610574807 | 200 |    1.679406ms |      172.20.0.1 |     GET /api/log/?p=0&type=0&username=&token_name=&model_name=&start_timestamp=0&end_timestamp=1749627841&channel=
+[INFO] 2025/06/11 - 14:45:28 | main.go:32 [main] One API v0.6.11-preview.7 started 
+[INFO] 2025/06/11 - 14:45:28 | model/main.go:103 [openSQLite] SQL_DSN not set, using SQLite as database 
+[INFO] 2025/06/11 - 14:45:28 | model/main.go:129 [InitDB] database migration started 
+[INFO] 2025/06/11 - 14:45:28 | model/main.go:134 [InitDB] database migrated 
+[INFO] 2025/06/11 - 14:45:28 | common/redis.go:20 [InitRedisClient] REDIS_CONN_STRING not set, Redis is not enabled 
+[INFO] 2025/06/11 - 14:45:28 | main.go:65 [main] using theme default 
+[INFO] 2025/06/11 - 14:45:28 | relay/adaptor/openai/token.go:23 [InitTokenEncoders] initializing token encoders 
+[INFO] 2025/06/11 - 14:46:02 | relay/adaptor/openai/token.go:49 [InitTokenEncoders] token encoders initialized 
+[INFO] 2025/06/11 - 14:46:02 | main.go:119 [main] server started on http://localhost:3000 
+[INFO] 2025/06/11 - 14:53:29 | main.go:32 [main] One API v0.6.11-preview.7 started 
+[INFO] 2025/06/11 - 14:53:29 | model/main.go:103 [openSQLite] SQL_DSN not set, using SQLite as database 
+[INFO] 2025/06/11 - 14:53:29 | model/main.go:129 [InitDB] database migration started 
+[INFO] 2025/06/11 - 14:53:29 | model/main.go:134 [InitDB] database migrated 
+[INFO] 2025/06/11 - 14:53:29 | common/redis.go:20 [InitRedisClient] REDIS_CONN_STRING not set, Redis is not enabled 
+[INFO] 2025/06/11 - 14:53:29 | main.go:65 [main] using theme default 
+[INFO] 2025/06/11 - 14:53:29 | relay/adaptor/openai/token.go:23 [InitTokenEncoders] initializing token encoders 
+[INFO] 2025/06/11 - 14:54:11 | relay/adaptor/openai/token.go:49 [InitTokenEncoders] token encoders initialized 
+[INFO] 2025/06/11 - 14:54:11 | main.go:119 [main] server started on http://localhost:3000 
+[INFO] 2025/06/11 - 14:54:51 | main.go:32 [main] One API v0.6.11-preview.7 started 
+[INFO] 2025/06/11 - 14:54:51 | model/main.go:103 [openSQLite] SQL_DSN not set, using SQLite as database 
+[INFO] 2025/06/11 - 14:54:51 | model/main.go:129 [InitDB] database migration started 
+[INFO] 2025/06/11 - 14:54:51 | model/main.go:134 [InitDB] database migrated 
+[INFO] 2025/06/11 - 14:54:51 | common/redis.go:20 [InitRedisClient] REDIS_CONN_STRING not set, Redis is not enabled 
+[INFO] 2025/06/11 - 14:54:51 | main.go:65 [main] using theme default 
+[INFO] 2025/06/11 - 14:54:51 | relay/adaptor/openai/token.go:23 [InitTokenEncoders] initializing token encoders 
+[INFO] 2025/06/11 - 14:55:26 | relay/adaptor/openai/token.go:49 [InitTokenEncoders] token encoders initialized 
+[INFO] 2025/06/11 - 14:55:26 | main.go:119 [main] server started on http://localhost:3000 
+[GIN] 2025/06/11 - 14:55:39 | 202506111455393631587244342355 | 200 |         300µs |      172.23.0.1 |     GET /
+[GIN] 2025/06/11 - 14:55:39 | 202506111455398921248119787500 | 200 |     264.956µs |      172.23.0.1 |     GET /api/status
+[GIN] 2025/06/11 - 14:55:39 | 202506111455399516264623683509 | 200 |      58.764µs |      172.23.0.1 |     GET /api/notice
+[GIN] 2025/06/11 - 14:55:39 | 202506111455399579157084009047 | 200 |      64.827µs |      172.23.0.1 |     GET /api/home_page_content
+[GIN] 2025/06/11 - 14:55:42 | 202506111455426713422983848328 | 401 |     270.031µs |      172.23.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 14:55:42 | 202506111455426750777247102529 | 401 |      73.428µs |      172.23.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 14:55:42 | 202506111455427932705538368815 | 200 |     256.008µs |      172.23.0.1 |     GET /login?expired=true
+[GIN] 2025/06/11 - 14:55:42 | 202506111455428409087484159790 | 200 |      90.122µs |      172.23.0.1 |     GET /login?expired=true
+[GIN] 2025/06/11 - 14:55:42 | 2025061114554211148249364363886 | 200 |      92.091µs |      172.23.0.1 |     GET /api/status
+[GIN] 2025/06/11 - 14:55:44 | 2025061114554437959076146520243 | 200 |    46.37307ms |      172.23.0.1 |    POST /api/user/login
+[GIN] 2025/06/11 - 14:55:44 | 2025061114554443243212294015946 | 200 |     257.724µs |      172.23.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 14:55:45 | 2025061114554587813781833970458 | 200 |    1.540246ms |      172.23.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 14:55:45 | 2025061114554587895276001320636 | 200 |    2.277435ms |      172.23.0.1 |     GET /api/models
+[INFO] 2025/06/11 - 14:55:47 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 14:55:47 | 2025061114554730641761299769660 | 200 |     839.209µs |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 14:55:47 | 2025061114554730641761299769660 | model/log.go:51 [recordLogHelper] record log: &{Id:11 UserId:0 CreatedAt:1749624947 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://host.docker.internal:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061114554730641761299769660 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 14:55:48 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 14:55:48 | 2025061114554879097540974951081 | 200 |    2.085807ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 14:55:48 | 2025061114554879097540974951081 | model/log.go:51 [recordLogHelper] record log: &{Id:12 UserId:0 CreatedAt:1749624948 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://host.docker.internal:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061114554879097540974951081 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 14:55:49 | controller/channel-test.go:131 [testChannel] {"messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"model":"deepseek-chat"} 
+[INFO] 2025/06/11 - 14:55:55 | controller/channel-test.go:165 [testChannel] testing channel #1, response: 
+{"id":"29516fbe-39f5-4afb-9576-f270c7d6f8fe","object":"chat.completion","created":1749624948,"model":"deepseek-chat","choices":[{"index":0,"message":{"role":"assistant","content":"GPT-4o"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":14,"completion_tokens":4,"total_tokens":18,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":14},"system_fingerprint":"fp_8802369eaa_prod0425fp8"} 
+[GIN] 2025/06/11 - 14:55:55 | 2025061114554959954143609070059 | 200 |  5.665278783s |      172.23.0.1 |     GET /api/channel/test/1?model=deepseek-chat
+[INFO] 2025/06/11 - 14:55:55 | 2025061114554959954143609070059 | model/log.go:51 [recordLogHelper] record log: &{Id:13 UserId:0 CreatedAt:1749624955 Type:5 Content:渠道 deepseek 测试成功，响应：GPT-4o Username: TokenName: ModelName:deepseek-chat Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:1 RequestId:2025061114554959954143609070059 ElapsedTime:5664 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 14:55:57 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 14:55:57 | 2025061114555785989767964788266 | 200 |    3.015282ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 14:55:57 | 2025061114555785989767964788266 | model/log.go:51 [recordLogHelper] record log: &{Id:14 UserId:0 CreatedAt:1749624957 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://host.docker.internal:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061114555785989767964788266 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 14:55:59 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 14:55:59 | 2025061114555963835560439464000 | 200 |    1.802799ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 14:55:59 | 2025061114555963835560439464000 | model/log.go:51 [recordLogHelper] record log: &{Id:15 UserId:0 CreatedAt:1749624959 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://host.docker.internal:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061114555963835560439464000 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 14:56:06 | 2025061114560689398540567226714 | 200 |    1.185434ms |      172.23.0.1 |     GET /api/log/?p=0&type=0&username=&token_name=&model_name=&start_timestamp=0&end_timestamp=1749628566&channel=
+[GIN] 2025/06/11 - 14:58:13 | 2025061114581376297446103271975 | 200 |     595.333µs |      172.23.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 14:58:13 | 2025061114581376269479974980335 | 200 |     942.691µs |      172.23.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 14:58:15 | 2025061114581529062871496888983 | 200 |     953.876µs |      172.23.0.1 |     GET /api/channel/2
+[GIN] 2025/06/11 - 14:58:15 | 2025061114581529216085629412377 | 200 |     252.101µs |      172.23.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 14:58:15 | 2025061114581529134997922327712 | 200 |    3.841615ms |      172.23.0.1 |     GET /api/channel/models
+[GIN] 2025/06/11 - 14:59:00 | 2025061114590074867818854718085 | 200 |    1.089834ms |      172.23.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 14:59:00 | 2025061114590075320641858123055 | 200 |     2.17025ms |      172.23.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 14:59:02 | 2025061114590290474751642143289 | 200 |    4.241001ms |      172.23.0.1 |  DELETE /api/channel/2
+[GIN] 2025/06/11 - 14:59:04 | 2025061114590410170835869726947 | 200 |     362.775µs |      172.23.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 14:59:04 | 2025061114590410174523674118197 | 200 |    3.684503ms |      172.23.0.1 |     GET /api/channel/models
+[GIN] 2025/06/11 - 14:59:55 | 2025061114595516632734542375819 | 200 |     5.76989ms |      172.23.0.1 |    POST /api/channel/
+[GIN] 2025/06/11 - 14:59:57 | 2025061114595753342818313526988 | 200 |     293.028µs |      172.23.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 14:59:57 | 2025061114595753343115951442348 | 200 |     707.177µs |      172.23.0.1 |     GET /api/models
+[INFO] 2025/06/11 - 14:59:58 | controller/channel-test.go:131 [testChannel] {"messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"model":"qwen3:4B"} 
+[GIN] 2025/06/11 - 14:59:58 | 2025061114595847337477665670040 | 200 |    3.205443ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 14:59:58 | 2025061114595847337477665670040 | model/log.go:51 [recordLogHelper] record log: &{Id:16 UserId:0 CreatedAt:1749625198 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://ollama:11434/v1/v1/chat/completions": dial tcp: lookup ollama on 127.0.0.11:53: server misbehaving Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061114595847337477665670040 ElapsedTime:2 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:00:00 | controller/channel-test.go:131 [testChannel] {"messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"model":"qwen3:4B"} 
+[GIN] 2025/06/11 - 15:00:00 | 2025061115000064202589500126800 | 200 |    2.636989ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:00:00 | 2025061115000064202589500126800 | model/log.go:51 [recordLogHelper] record log: &{Id:17 UserId:0 CreatedAt:1749625200 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://ollama:11434/v1/v1/chat/completions": dial tcp: lookup ollama on 127.0.0.11:53: server misbehaving Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115000064202589500126800 ElapsedTime:1 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:00:02 | controller/channel-test.go:131 [testChannel] {"messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"model":"qwen3:4B"} 
+[GIN] 2025/06/11 - 15:00:02 | 2025061115000253989664278562585 | 200 |    2.841161ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:00:02 | 2025061115000253989664278562585 | model/log.go:51 [recordLogHelper] record log: &{Id:18 UserId:0 CreatedAt:1749625202 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://ollama:11434/v1/v1/chat/completions": dial tcp: lookup ollama on 127.0.0.11:53: server misbehaving Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115000253989664278562585 ElapsedTime:1 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:00:03 | controller/channel-test.go:131 [testChannel] {"messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"model":"qwen3:4B"} 
+[GIN] 2025/06/11 - 15:00:03 | 2025061115000328855598570757859 | 200 |    1.118206ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:00:03 | 2025061115000328855598570757859 | model/log.go:51 [recordLogHelper] record log: &{Id:19 UserId:0 CreatedAt:1749625203 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://ollama:11434/v1/v1/chat/completions": dial tcp: lookup ollama on 127.0.0.11:53: server misbehaving Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115000328855598570757859 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:00:06 | controller/channel-test.go:131 [testChannel] {"messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"model":"qwen3:4B"} 
+[GIN] 2025/06/11 - 15:00:06 | 2025061115000613348112359543915 | 200 |    3.095039ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:00:06 | 2025061115000613348112359543915 | model/log.go:51 [recordLogHelper] record log: &{Id:20 UserId:0 CreatedAt:1749625206 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://ollama:11434/v1/v1/chat/completions": dial tcp: lookup ollama on 127.0.0.11:53: server misbehaving Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115000613348112359543915 ElapsedTime:2 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:00:08 | controller/channel-test.go:131 [testChannel] {"messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"model":"deepseek-chat"} 
+[GIN] 2025/06/11 - 15:00:09 | 2025061115000950478909388521726 | 200 |    1.136773ms |      172.23.0.1 |     GET /api/channel/2
+[GIN] 2025/06/11 - 15:00:09 | 2025061115000950650410760406331 | 200 |     573.158µs |      172.23.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 15:00:09 | 2025061115000950553155606884511 | 200 |    3.495779ms |      172.23.0.1 |     GET /api/channel/models
+[INFO] 2025/06/11 - 15:00:13 | controller/channel-test.go:165 [testChannel] testing channel #1, response: 
+{"id":"a6afe6bc-9709-4e69-b93d-db643e8a1bac","object":"chat.completion","created":1749625206,"model":"deepseek-chat","choices":[{"index":0,"message":{"role":"assistant","content":"GPT-4o"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":14,"completion_tokens":4,"total_tokens":18,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":14},"system_fingerprint":"fp_8802369eaa_prod0425fp8"} 
+[GIN] 2025/06/11 - 15:00:13 | 2025061115000846602559564116087 | 200 |  4.952285567s |      172.23.0.1 |     GET /api/channel/test/1?model=deepseek-chat
+[INFO] 2025/06/11 - 15:00:13 | 2025061115000846602559564116087 | model/log.go:51 [recordLogHelper] record log: &{Id:21 UserId:0 CreatedAt:1749625213 Type:5 Content:渠道 deepseek 测试成功，响应：GPT-4o Username: TokenName: ModelName:deepseek-chat Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:1 RequestId:2025061115000846602559564116087 ElapsedTime:4951 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 15:00:24 | 2025061115002442596452883628972 | 200 |    6.197031ms |      172.23.0.1 |     PUT /api/channel/
+[GIN] 2025/06/11 - 15:00:50 | 2025061115005088664254292512778 | 200 |    1.076219ms |      172.23.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 15:00:50 | 2025061115005088782196153880810 | 200 |    3.487624ms |      172.23.0.1 |     GET /api/models
+[INFO] 2025/06/11 - 15:00:52 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:00:52 | 202506111500529226656185560463 | 200 |    1.913052ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:00:52 | 202506111500529226656185560463 | model/log.go:51 [recordLogHelper] record log: &{Id:22 UserId:0 CreatedAt:1749625252 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://host.docker.internal:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:202506111500529226656185560463 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 15:00:54 | 202506111500547581656452977481 | 200 |     380.125µs |      172.23.0.1 |     GET /api/channel/2
+[GIN] 2025/06/11 - 15:00:54 | 202506111500547639017211673127 | 200 |     112.669µs |      172.23.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 15:00:54 | 202506111500547605905519352981 | 200 |    2.193237ms |      172.23.0.1 |     GET /api/channel/models
+[GIN] 2025/06/11 - 15:01:31 | 2025061115013126002727359795363 | 200 |    4.316045ms |      172.23.0.1 |     PUT /api/channel/
+[GIN] 2025/06/11 - 15:01:33 | 2025061115013332050944002311185 | 200 |     1.72224ms |      172.23.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 15:01:33 | 2025061115013332192803155205825 | 200 |    2.471044ms |      172.23.0.1 |     GET /api/models
+[INFO] 2025/06/11 - 15:01:34 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:01:34 | 2025061115013418355550064109411 | 200 |    2.038824ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:01:34 | 2025061115013418355550064109411 | model/log.go:51 [recordLogHelper] record log: &{Id:23 UserId:0 CreatedAt:1749625294 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://host.docker.internal:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115013418355550064109411 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:01:42 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:01:42 | 2025061115014271649035115135345 | 200 |     805.127µs |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:01:42 | 2025061115014271649035115135345 | model/log.go:51 [recordLogHelper] record log: &{Id:24 UserId:0 CreatedAt:1749625302 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://host.docker.internal:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115014271649035115135345 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 15:01:44 | 2025061115014431030935360031510 | 200 |     415.053µs |      172.23.0.1 |     GET /api/log/?p=0&type=0&username=&token_name=&model_name=&start_timestamp=0&end_timestamp=1749628904&channel=
+[GIN] 2025/06/11 - 15:01:47 | 2025061115014784554881395288176 | 200 |     242.378µs |      172.23.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 15:01:47 | 2025061115014784553266783452939 | 200 |     576.131µs |      172.23.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 15:01:50 | 2025061115015046801345034415891 | 200 |    1.311146ms |      172.23.0.1 |     GET /api/channel/2
+[GIN] 2025/06/11 - 15:01:50 | 2025061115015047239096778673053 | 200 |     118.166µs |      172.23.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 15:01:50 | 2025061115015046928799698930456 | 200 |    4.748956ms |      172.23.0.1 |     GET /api/channel/models
+[GIN] 2025/06/11 - 15:05:34 | 2025061115053421350974751594638 | 200 |    7.068082ms |      172.23.0.1 |     PUT /api/channel/
+[GIN] 2025/06/11 - 15:05:36 | 2025061115053656780422403101805 | 200 |    1.702131ms |      172.23.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 15:05:36 | 2025061115053656919398529462352 | 200 |    3.010273ms |      172.23.0.1 |     GET /api/models
+[INFO] 2025/06/11 - 15:05:37 | controller/channel-test.go:131 [testChannel] {"messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"model":"qwen3:4B"} 
+[GIN] 2025/06/11 - 15:05:37 | 2025061115053756740696961818348 | 200 |    3.486998ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:05:37 | 2025061115053756740696961818348 | model/log.go:51 [recordLogHelper] record log: &{Id:25 UserId:0 CreatedAt:1749625537 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://ollama:11434/v1/chat/completions": dial tcp: lookup ollama on 127.0.0.11:53: server misbehaving Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115053756740696961818348 ElapsedTime:2 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:05:44 | controller/channel-test.go:131 [testChannel] {"messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"model":"qwen3:4B"} 
+[GIN] 2025/06/11 - 15:05:44 | 2025061115054444089908551025376 | 200 |     3.01755ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:05:44 | 2025061115054444089908551025376 | model/log.go:51 [recordLogHelper] record log: &{Id:26 UserId:0 CreatedAt:1749625544 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://ollama:11434/v1/chat/completions": dial tcp: lookup ollama on 127.0.0.11:53: server misbehaving Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115054444089908551025376 ElapsedTime:2 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 15:06:01 | 2025061115060168761861380758926 | 200 |    1.691995ms |      172.23.0.1 |     GET /api/channel/test?scope=all
+[INFO] 2025/06/11 - 15:06:01 | controller/channel-test.go:131 [testChannel] {"messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"model":"qwen3:4B"} 
+[INFO] 2025/06/11 - 15:06:01 | controller/channel-test.go:131 [testChannel] {"messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"model":"deepseek-chat"} 
+[INFO] 2025/06/11 - 15:06:01 | 2025061115060168761861380758926 | model/log.go:51 [recordLogHelper] record log: &{Id:27 UserId:0 CreatedAt:1749625561 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://ollama:11434/v1/chat/completions": dial tcp: lookup ollama on 127.0.0.11:53: server misbehaving Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115060168761861380758926 ElapsedTime:2 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 15:06:02 | 2025061115060298743115719171852 | 200 |     1.01466ms |      172.23.0.1 |     GET /api/channel/test?scope=all
+[INFO] 2025/06/11 - 15:06:05 | controller/channel-test.go:165 [testChannel] testing channel #1, response: 
+{"id":"26aff98b-36ba-45b1-ba55-f42f0184e87e","object":"chat.completion","created":1749625559,"model":"deepseek-chat","choices":[{"index":0,"message":{"role":"assistant","content":"GPT-4o"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":14,"completion_tokens":4,"total_tokens":18,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":14},"system_fingerprint":"fp_8802369eaa_prod0425fp8"} 
+[ERROR] 2025/06/11 - 15:06:05 | controller/channel-test.go:269 [func1] failed to send email: unknown notify method: all 
+[INFO] 2025/06/11 - 15:06:05 | 2025061115060168761861380758926 | model/log.go:51 [recordLogHelper] record log: &{Id:28 UserId:0 CreatedAt:1749625565 Type:5 Content:渠道 deepseek 测试成功，响应：GPT-4o Username: TokenName: ModelName:deepseek-chat Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:1 RequestId:2025061115060168761861380758926 ElapsedTime:4293 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:06:15 | controller/channel-test.go:131 [testChannel] {"messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"model":"qwen3:4B"} 
+[GIN] 2025/06/11 - 15:06:15 | 2025061115061545247582194841480 | 200 |    4.282832ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:06:15 | 2025061115061545247582194841480 | model/log.go:51 [recordLogHelper] record log: &{Id:29 UserId:0 CreatedAt:1749625575 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://ollama:11434/v1/chat/completions": dial tcp: lookup ollama on 127.0.0.11:53: server misbehaving Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115061545247582194841480 ElapsedTime:3 IsStream:false SystemPromptReset:false} 
+[ERROR] 2025/06/11 - 15:06:29 | model/token.go:68 [ValidateUserToken] CacheGetTokenByKey failed: record not found 
+[ERROR] 2025/06/11 - 15:06:29 | 20250611150629381567724126723 | middleware/utils.go:20 [abortWithMessage] 无效的令牌 
+[GIN] 2025/06/11 - 15:06:29 | 20250611150629381567724126723 | 401 |     219.138µs |      172.23.0.1 |    POST /v1/chat/completions
+[INFO] 2025/06/11 - 15:06:39 | controller/channel-test.go:131 [testChannel] {"messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"model":"qwen3:4B"} 
+[GIN] 2025/06/11 - 15:06:39 | 2025061115063966204034016112544 | 200 |    4.206791ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:06:39 | 2025061115063966204034016112544 | model/log.go:51 [recordLogHelper] record log: &{Id:30 UserId:0 CreatedAt:1749625599 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://ollama:11434/v1/chat/completions": dial tcp: lookup ollama on 127.0.0.11:53: server misbehaving Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115063966204034016112544 ElapsedTime:1 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:06:41 | controller/channel-test.go:131 [testChannel] {"messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"model":"qwen3:4B"} 
+[GIN] 2025/06/11 - 15:06:41 | 2025061115064147303109223957531 | 200 |    1.384896ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:06:41 | 2025061115064147303109223957531 | model/log.go:51 [recordLogHelper] record log: &{Id:31 UserId:0 CreatedAt:1749625601 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://ollama:11434/v1/chat/completions": dial tcp: lookup ollama on 127.0.0.11:53: server misbehaving Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115064147303109223957531 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:06:42 | controller/channel-test.go:131 [testChannel] {"messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"model":"qwen3:4B"} 
+[GIN] 2025/06/11 - 15:06:42 | 2025061115064217793806332385312 | 200 |    4.716041ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:06:42 | 2025061115064217793806332385312 | model/log.go:51 [recordLogHelper] record log: &{Id:32 UserId:0 CreatedAt:1749625602 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://ollama:11434/v1/chat/completions": dial tcp: lookup ollama on 127.0.0.11:53: server misbehaving Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115064217793806332385312 ElapsedTime:2 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:06:42 | controller/channel-test.go:131 [testChannel] {"messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"model":"qwen3:4B"} 
+[GIN] 2025/06/11 - 15:06:42 | 2025061115064298565293916736787 | 200 |     4.04939ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:06:42 | 2025061115064298565293916736787 | model/log.go:51 [recordLogHelper] record log: &{Id:33 UserId:0 CreatedAt:1749625602 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://ollama:11434/v1/chat/completions": dial tcp: lookup ollama on 127.0.0.11:53: server misbehaving Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115064298565293916736787 ElapsedTime:3 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 15:06:44 | 2025061115064439928194036729292 | 200 |    4.493618ms |      172.23.0.1 |     PUT /api/channel/
+[GIN] 2025/06/11 - 15:06:45 | 2025061115064540069232637202124 | 200 |    9.522712ms |      172.23.0.1 |     PUT /api/channel/
+[GIN] 2025/06/11 - 15:06:46 | 2025061115064638733737006077984 | 200 |     821.511µs |      172.23.0.1 |     GET /api/channel/2
+[GIN] 2025/06/11 - 15:06:46 | 2025061115064638865590251926896 | 200 |     428.841µs |      172.23.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 15:06:46 | 2025061115064638796357680343590 | 200 |    4.690156ms |      172.23.0.1 |     GET /api/channel/models
+[GIN] 2025/06/11 - 15:07:10 | 2025061115071033331961943805686 | 200 |    6.845452ms |      172.23.0.1 |     PUT /api/channel/
+[GIN] 2025/06/11 - 15:07:14 | 2025061115071437040638111208987 | 200 |    1.115554ms |      172.23.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 15:07:14 | 2025061115071437130342427477791 | 200 |    1.506098ms |      172.23.0.1 |     GET /api/models
+[INFO] 2025/06/11 - 15:07:23 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:07:23 | 2025061115072363639658536445208 | 200 |    2.015831ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:07:23 | 2025061115072363639658536445208 | model/log.go:51 [recordLogHelper] record log: &{Id:34 UserId:0 CreatedAt:1749625643 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://host.docker.internal:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115072363639658536445208 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 15:07:31 | 2025061115073173833914111872381 | 200 |     574.269µs |      172.23.0.1 |     GET /api/channel/2
+[GIN] 2025/06/11 - 15:07:31 | 2025061115073174125557888365629 | 200 |     243.406µs |      172.23.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 15:07:31 | 2025061115073174041663565726439 | 200 |    5.644462ms |      172.23.0.1 |     GET /api/channel/models
+[GIN] 2025/06/11 - 15:08:32 | 2025061115083248407575499691720 | 200 |    4.274294ms |      172.23.0.1 |     PUT /api/channel/
+[GIN] 2025/06/11 - 15:08:34 | 2025061115083428088183914019292 | 200 |    1.047535ms |      172.23.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 15:08:34 | 2025061115083428158219962072817 | 200 |    1.772763ms |      172.23.0.1 |     GET /api/models
+[INFO] 2025/06/11 - 15:08:35 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:08:35 | 2025061115083532584359631914683 | 200 |    1.846425ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:08:35 | 2025061115083532584359631914683 | model/log.go:51 [recordLogHelper] record log: &{Id:35 UserId:0 CreatedAt:1749625715 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://host.docker.internal:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115083532584359631914683 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:08:38 | controller/channel-test.go:131 [testChannel] {"model":"qwen2.5vl:3b","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:08:38 | 2025061115083820060078115745024 | 200 |    2.028496ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen2.5vl:3b
+[INFO] 2025/06/11 - 15:08:38 | 2025061115083820060078115745024 | model/log.go:51 [recordLogHelper] record log: &{Id:36 UserId:0 CreatedAt:1749625718 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://host.docker.internal:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen2.5vl:3b Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115083820060078115745024 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:08:40 | controller/channel-test.go:131 [testChannel] {"model":"nomic-embed-text:latest","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:08:40 | 2025061115084083885436010834834 | 200 |     529.425µs |      172.23.0.1 |     GET /api/channel/test/2?model=nomic-embed-text:latest
+[INFO] 2025/06/11 - 15:08:40 | 2025061115084083885436010834834 | model/log.go:51 [recordLogHelper] record log: &{Id:37 UserId:0 CreatedAt:1749625720 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://host.docker.internal:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:nomic-embed-text:latest Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115084083885436010834834 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:08:43 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:08:43 | 2025061115084310871183450918053 | 200 |    1.903319ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:08:43 | 2025061115084310871183450918053 | model/log.go:51 [recordLogHelper] record log: &{Id:38 UserId:0 CreatedAt:1749625723 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://host.docker.internal:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115084310871183450918053 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:08:44 | controller/channel-test.go:131 [testChannel] {"messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"model":"deepseek-reasoner"} 
+[INFO] 2025/06/11 - 15:08:56 | controller/channel-test.go:131 [testChannel] {"messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"model":"deepseek-chat"} 
+[GIN] 2025/06/11 - 15:09:00 | 202506111509008894151727514436 | 200 |     500.421µs |      172.23.0.1 |     GET /api/log/?p=0&type=0&username=&token_name=&model_name=&start_timestamp=0&end_timestamp=1749629340&channel=
+[INFO] 2025/06/11 - 15:09:01 | controller/channel-test.go:165 [testChannel] testing channel #1, response: 
+{"id":"b4282ba0-dce7-4eb6-b6f6-8d866364dc16","object":"chat.completion","created":1749625734,"model":"deepseek-chat","choices":[{"index":0,"message":{"role":"assistant","content":"GPT-4o"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":14,"completion_tokens":4,"total_tokens":18,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":14},"system_fingerprint":"fp_8802369eaa_prod0425fp8"} 
+[GIN] 2025/06/11 - 15:09:01 | 2025061115085671788782695993146 | 200 |  4.606323235s |      172.23.0.1 |     GET /api/channel/test/1?model=deepseek-chat
+[INFO] 2025/06/11 - 15:09:01 | 2025061115085671788782695993146 | model/log.go:51 [recordLogHelper] record log: &{Id:39 UserId:0 CreatedAt:1749625741 Type:5 Content:渠道 deepseek 测试成功，响应：GPT-4o Username: TokenName: ModelName:deepseek-chat Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:1 RequestId:2025061115085671788782695993146 ElapsedTime:4605 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:09:02 | controller/channel-test.go:165 [testChannel] testing channel #1, response: 
+{"id":"f0141dd5-ad28-4bcd-9cb6-9efbbf82bbe5","object":"chat.completion","created":1749625722,"model":"deepseek-reasoner","choices":[{"index":0,"message":{"role":"assistant","content":"gpt-4-turbo","reasoning_content":"We are being asked to output only the specific model name with no additional text.\n The model name for this instance is \"gpt-4-turbo\".\n However, note that the model name might be different in some contexts, but based on the current setup, we are using the model that OpenAI refers to as \"gpt-4-turbo\".\n But to be precise, the model name that the user is interacting with is the one that OpenAI has designated as \"gpt-4-turbo\" in the API.\n Since the instruction is to output only the model name without any additional text, we output exactly that."},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":16,"completion_tokens":136,"total_tokens":152,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens_details":{"reasoning_tokens":127},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":16},"system_fingerprint":"fp_393bca965e_prod0425fp8"} 
+[GIN] 2025/06/11 - 15:09:02 | 2025061115084488771808110794353 | 200 | 17.919640469s |      172.23.0.1 |     GET /api/channel/test/1?model=deepseek-reasoner
+[INFO] 2025/06/11 - 15:09:02 | 2025061115084488771808110794353 | model/log.go:51 [recordLogHelper] record log: &{Id:40 UserId:0 CreatedAt:1749625742 Type:5 Content:渠道 deepseek 测试成功，响应：gpt-4-turbo Username: TokenName: ModelName:deepseek-reasoner Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:1 RequestId:2025061115084488771808110794353 ElapsedTime:17918 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 15:10:45 | 2025061115104575728591181866286 | 200 |     691.848µs |      172.23.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 15:10:45 | 2025061115104575725214955018521 | 200 |     815.726µs |      172.23.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 15:10:47 | 2025061115104712945271164074586 | 200 |     987.403µs |      172.23.0.1 |     GET /api/channel/2
+[GIN] 2025/06/11 - 15:10:47 | 2025061115104713307173036909633 | 200 |     373.408µs |      172.23.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 15:10:47 | 2025061115104713029270349972270 | 200 |    7.099571ms |      172.23.0.1 |     GET /api/channel/models
+[GIN] 2025/06/11 - 15:10:57 | 2025061115105722834554003159336 | 200 |     4.23539ms |      172.23.0.1 |     PUT /api/channel/
+[GIN] 2025/06/11 - 15:10:59 | 2025061115105946387436044621721 | 200 |    1.137314ms |      172.23.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 15:10:59 | 2025061115105946497241244575746 | 200 |    2.848344ms |      172.23.0.1 |     GET /api/models
+[INFO] 2025/06/11 - 15:11:00 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:11:00 | 2025061115110025475229927626443 | 200 |      444.67µs |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:11:00 | 2025061115110025475229927626443 | model/log.go:51 [recordLogHelper] record log: &{Id:41 UserId:0 CreatedAt:1749625860 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://172.17.0.1:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115110025475229927626443 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:11:02 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:11:02 | 2025061115110250330917288328326 | 200 |    1.909535ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:11:02 | 2025061115110250330917288328326 | model/log.go:51 [recordLogHelper] record log: &{Id:42 UserId:0 CreatedAt:1749625862 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://172.17.0.1:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115110250330917288328326 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:11:03 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:11:03 | 2025061115110326173678019714326 | 200 |    1.846247ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:11:03 | 2025061115110326173678019714326 | model/log.go:51 [recordLogHelper] record log: &{Id:43 UserId:0 CreatedAt:1749625863 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://172.17.0.1:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115110326173678019714326 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:11:03 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:11:03 | 2025061115110374558649144973923 | 200 |    1.843886ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:11:03 | 2025061115110374558649144973923 | model/log.go:51 [recordLogHelper] record log: &{Id:44 UserId:0 CreatedAt:1749625863 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://172.17.0.1:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115110374558649144973923 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:11:04 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:11:04 | 2025061115110436211170958524 | 200 |    1.968592ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:11:04 | 2025061115110436211170958524 | model/log.go:51 [recordLogHelper] record log: &{Id:45 UserId:0 CreatedAt:1749625864 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://172.17.0.1:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115110436211170958524 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:11:04 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:11:04 | 2025061115110425319241774149945 | 200 |     516.743µs |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:11:04 | 2025061115110425319241774149945 | model/log.go:51 [recordLogHelper] record log: &{Id:46 UserId:0 CreatedAt:1749625864 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://172.17.0.1:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115110425319241774149945 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:11:04 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:11:04 | 2025061115110444683522806048716 | 200 |    1.676428ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:11:04 | 2025061115110444683522806048716 | model/log.go:51 [recordLogHelper] record log: &{Id:47 UserId:0 CreatedAt:1749625864 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://172.17.0.1:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115110444683522806048716 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:11:04 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:11:04 | 2025061115110460865552169414631 | 200 |    1.699412ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:11:04 | 2025061115110460865552169414631 | model/log.go:51 [recordLogHelper] record log: &{Id:48 UserId:0 CreatedAt:1749625864 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://172.17.0.1:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115110460865552169414631 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:11:04 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:11:04 | 2025061115110477128075138557598 | 200 |    1.791947ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:11:04 | 2025061115110477128075138557598 | model/log.go:51 [recordLogHelper] record log: &{Id:49 UserId:0 CreatedAt:1749625864 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://172.17.0.1:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115110477128075138557598 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:11:04 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:11:04 | 2025061115110491301674900910824 | 200 |    1.736581ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:11:04 | 2025061115110491301674900910824 | model/log.go:51 [recordLogHelper] record log: &{Id:50 UserId:0 CreatedAt:1749625864 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://172.17.0.1:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115110491301674900910824 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:14:56 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:14:56 | 2025061115145612055930128775255 | 200 |    3.975485ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:14:56 | 2025061115145612055930128775255 | model/log.go:51 [recordLogHelper] record log: &{Id:51 UserId:0 CreatedAt:1749626096 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://172.17.0.1:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115145612055930128775255 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:15:07 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:15:07 | 2025061115150717777247391459082 | 200 |     583.222µs |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:15:07 | 2025061115150717777247391459082 | model/log.go:51 [recordLogHelper] record log: &{Id:52 UserId:0 CreatedAt:1749626107 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://172.17.0.1:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115150717777247391459082 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 15:15:11 | 2025061115151127392283731902065 | 200 |     330.203µs |      172.23.0.1 |     GET /api/user/?p=0&order=
+[GIN] 2025/06/11 - 15:15:12 | 202506111515127325708047341497 | 200 |    1.191497ms |      172.23.0.1 |     GET /api/user/self
+[GIN] 2025/06/11 - 15:15:14 | 2025061115151460935886835135136 | 200 |     421.614µs |      172.23.0.1 |     GET /api/redemption/?p=0
+[GIN] 2025/06/11 - 15:15:16 | 2025061115151633555280750763244 | 200 |    1.965268ms |      172.23.0.1 |     GET /api/user/self
+[GIN] 2025/06/11 - 15:15:17 | 2025061115151729757007321353754 | 200 |     162.337µs |      172.23.0.1 |     GET /api/redemption/?p=0
+[GIN] 2025/06/11 - 15:15:17 | 2025061115151785311420452980846 | 200 |     258.706µs |      172.23.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 15:15:19 | 2025061115151940609160987341582 | 200 |     508.019µs |      172.23.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 15:15:19 | 2025061115151940646848894885047 | 200 |     984.511µs |      172.23.0.1 |     GET /api/models
+[INFO] 2025/06/11 - 15:15:22 | controller/channel-test.go:131 [testChannel] {"messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"model":"deepseek-chat"} 
+[GIN] 2025/06/11 - 15:15:25 | 2025061115152532703804695159323 | 200 |    1.518441ms |      172.23.0.1 |     GET /api/channel/2
+[GIN] 2025/06/11 - 15:15:25 | 2025061115152533151022449266924 | 200 |     109.299µs |      172.23.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 15:15:25 | 2025061115152532833009844909991 | 200 |    4.508815ms |      172.23.0.1 |     GET /api/channel/models
+[INFO] 2025/06/11 - 15:15:26 | controller/channel-test.go:165 [testChannel] testing channel #1, response: 
+{"id":"2bf411ea-7d29-4b81-bbfe-940dcf7d2903","object":"chat.completion","created":1749626119,"model":"deepseek-chat","choices":[{"index":0,"message":{"role":"assistant","content":"GPT-4o"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":14,"completion_tokens":4,"total_tokens":18,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":14},"system_fingerprint":"fp_8802369eaa_prod0425fp8"} 
+[GIN] 2025/06/11 - 15:15:26 | 202506111515227335982368430495 | 200 |  4.145179476s |      172.23.0.1 |     GET /api/channel/test/1?model=deepseek-chat
+[INFO] 2025/06/11 - 15:15:26 | 202506111515227335982368430495 | model/log.go:51 [recordLogHelper] record log: &{Id:53 UserId:0 CreatedAt:1749626126 Type:5 Content:渠道 deepseek 测试成功，响应：GPT-4o Username: TokenName: ModelName:deepseek-chat Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:1 RequestId:202506111515227335982368430495 ElapsedTime:4144 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 15:15:47 | 2025061115154772910776833477993 | 200 |    6.914939ms |      172.23.0.1 |     PUT /api/channel/
+[GIN] 2025/06/11 - 15:15:49 | 2025061115154954598497656932523 | 200 |     342.115µs |      172.23.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 15:15:49 | 2025061115154954635623895733748 | 200 |     478.322µs |      172.23.0.1 |     GET /api/models
+[INFO] 2025/06/11 - 15:15:50 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:15:50 | 2025061115155066665608986748956 | 200 |    1.904077ms |      172.23.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:15:50 | 2025061115155066665608986748956 | model/log.go:51 [recordLogHelper] record log: &{Id:54 UserId:0 CreatedAt:1749626150 Type:5 Content:渠道 ollama 测试失败，错误：do request failed: Post "http://host.docker.internal:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115155066665608986748956 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[INFO] 2025/06/11 - 15:17:12 | main.go:32 [main] One API v0.6.11-preview.7 started 
+[INFO] 2025/06/11 - 15:17:12 | model/main.go:103 [openSQLite] SQL_DSN not set, using SQLite as database 
+[INFO] 2025/06/11 - 15:17:12 | model/main.go:129 [InitDB] database migration started 
+[INFO] 2025/06/11 - 15:17:12 | model/main.go:134 [InitDB] database migrated 
+[INFO] 2025/06/11 - 15:17:12 | common/redis.go:20 [InitRedisClient] REDIS_CONN_STRING not set, Redis is not enabled 
+[INFO] 2025/06/11 - 15:17:12 | main.go:65 [main] using theme default 
+[INFO] 2025/06/11 - 15:17:12 | relay/adaptor/openai/token.go:23 [InitTokenEncoders] initializing token encoders 
+[INFO] 2025/06/11 - 15:18:07 | relay/adaptor/openai/token.go:49 [InitTokenEncoders] token encoders initialized 
+[INFO] 2025/06/11 - 15:18:07 | main.go:119 [main] server started on http://localhost:3000 
+[GIN] 2025/06/11 - 15:18:23 | 202506111518239959653518552300 | 200 |     343.691µs |      172.24.0.1 |     GET /channel
+[GIN] 2025/06/11 - 15:18:23 | 2025061115182316377141323262143 | 401 |     116.958µs |      172.24.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 15:18:23 | 2025061115182316391599520648969 | 401 |     222.837µs |      172.24.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 15:18:23 | 2025061115182316542593704494824 | 200 |     111.969µs |      172.24.0.1 |     GET /api/status
+[GIN] 2025/06/11 - 15:18:23 | 2025061115182317651879646741012 | 200 |     248.143µs |      172.24.0.1 |     GET /login?expired=true
+[GIN] 2025/06/11 - 15:18:23 | 2025061115182317926050120298015 | 200 |     320.139µs |      172.24.0.1 |     GET /login?expired=true
+[GIN] 2025/06/11 - 15:18:23 | 2025061115182321430479975829208 | 200 |      95.947µs |      172.24.0.1 |     GET /api/status
+[INFO] 2025/06/11 - 15:18:28 | main.go:32 [main] One API v0.6.11-preview.7 started 
+[INFO] 2025/06/11 - 15:18:28 | model/main.go:103 [openSQLite] SQL_DSN not set, using SQLite as database 
+[INFO] 2025/06/11 - 15:18:28 | model/main.go:129 [InitDB] database migration started 
+[INFO] 2025/06/11 - 15:18:29 | model/main.go:134 [InitDB] database migrated 
+[INFO] 2025/06/11 - 15:18:29 | common/redis.go:20 [InitRedisClient] REDIS_CONN_STRING not set, Redis is not enabled 
+[INFO] 2025/06/11 - 15:18:29 | main.go:65 [main] using theme default 
+[INFO] 2025/06/11 - 15:18:29 | relay/adaptor/openai/token.go:23 [InitTokenEncoders] initializing token encoders 
+[INFO] 2025/06/11 - 15:19:26 | relay/adaptor/openai/token.go:49 [InitTokenEncoders] token encoders initialized 
+[INFO] 2025/06/11 - 15:19:26 | main.go:119 [main] server started on http://localhost:3000 
+[INFO] 2025/06/11 - 15:21:46 | main.go:32 [main] One API v0.6.11-preview.7 started 
+[INFO] 2025/06/11 - 15:21:46 | model/main.go:103 [openSQLite] SQL_DSN not set, using SQLite as database 
+[INFO] 2025/06/11 - 15:21:46 | model/main.go:129 [InitDB] database migration started 
+[INFO] 2025/06/11 - 15:21:46 | model/main.go:134 [InitDB] database migrated 
+[INFO] 2025/06/11 - 15:21:46 | common/redis.go:20 [InitRedisClient] REDIS_CONN_STRING not set, Redis is not enabled 
+[INFO] 2025/06/11 - 15:21:46 | main.go:65 [main] using theme default 
+[INFO] 2025/06/11 - 15:21:46 | relay/adaptor/openai/token.go:23 [InitTokenEncoders] initializing token encoders 
+[INFO] 2025/06/11 - 15:24:05 | relay/adaptor/openai/token.go:49 [InitTokenEncoders] token encoders initialized 
+[INFO] 2025/06/11 - 15:24:05 | main.go:119 [main] server started on http://localhost:3000 
+[GIN] 2025/06/11 - 15:24:06 | 2025061115240673335309444629579 | 200 |    1.753811ms |      172.26.0.1 |     GET /
+[GIN] 2025/06/11 - 15:24:06 | 2025061115240680595790950627568 | 200 |     317.217µs |      172.26.0.1 |     GET /api/status
+[GIN] 2025/06/11 - 15:24:06 | 2025061115240681337429789981720 | 200 |      62.104µs |      172.26.0.1 |     GET /api/notice
+[GIN] 2025/06/11 - 15:24:06 | 2025061115240681351967142357412 | 200 |     273.353µs |      172.26.0.1 |     GET /api/home_page_content
+[GIN] 2025/06/11 - 15:24:22 | 2025061115242270982172446248421 | 401 |    1.351675ms |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 15:24:22 | 2025061115242271160957787545892 | 401 |      382.25µs |      172.26.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 15:24:22 | 2025061115242272839167542456387 | 200 |     253.733µs |      172.26.0.1 |     GET /login?expired=true
+[GIN] 2025/06/11 - 15:24:22 | 2025061115242273128443901753650 | 200 |     236.611µs |      172.26.0.1 |     GET /login?expired=true
+[GIN] 2025/06/11 - 15:24:22 | 2025061115242275925447454025279 | 200 |      85.556µs |      172.26.0.1 |     GET /api/status
+[GIN] 2025/06/11 - 15:24:24 | 2025061115242399086282038223332 | 200 |   46.160738ms |      172.26.0.1 |    POST /api/user/login
+[GIN] 2025/06/11 - 15:24:24 | 202506111524244289444693523010 | 200 |     272.549µs |      172.26.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 15:24:25 | 2025061115242546666055886404091 | 200 |    1.693619ms |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 15:24:25 | 2025061115242546871736943294417 | 200 |     732.461µs |      172.26.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 15:24:27 | 2025061115242738772305467793864 | 200 |     307.522µs |      172.26.0.1 |     GET /api/channel/2
+[GIN] 2025/06/11 - 15:24:27 | 2025061115242738822274993204508 | 200 |      130.17µs |      172.26.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 15:24:27 | 2025061115242738775732702834738 | 200 |      2.5136ms |      172.26.0.1 |     GET /api/channel/models
+[GIN] 2025/06/11 - 15:24:31 | 2025061115243169186894939307832 | 200 |    5.197482ms |      172.26.0.1 |     PUT /api/channel/
+[GIN] 2025/06/11 - 15:24:34 | 2025061115243456393515340476278 | 200 |     450.447µs |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 15:24:34 | 2025061115243456410152171723143 | 200 |     528.319µs |      172.26.0.1 |     GET /api/models
+[INFO] 2025/06/11 - 15:24:35 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[INFO] 2025/06/11 - 15:24:44 | controller/channel-test.go:165 [testChannel] testing channel #2, response: 
+{"id":"chatcmpl-de0239bc3dba47639c96d4fa8003c88a","model":"qwen3:4B","object":"chat.completion","created":1749626684,"choices":[{"index":0,"message":{"role":"assistant","content":"\u003cthink\u003e\nOkay, the user is asking me to output only my specific model name without any additional text. Let me make sure I understand the request correctly. They want just the name, nothing else. My model name is Qwen, so I should respond with that. I need to check if there's any possible confusion here. Sometimes people might think the full name is needed, but the instruction is clear. I'll stick to the requirements and provide only \"Qwen\".\n\u003c/think\u003e\n\nQwen"},"finish_reason":"stop"}],"usage":{"prompt_tokens":19,"completion_tokens":100,"total_tokens":119}} 
+[GIN] 2025/06/11 - 15:24:44 | 2025061115243542351284387671947 | 200 |  9.007612487s |      172.26.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:24:44 | 2025061115243542351284387671947 | model/log.go:51 [recordLogHelper] record log: &{Id:55 UserId:0 CreatedAt:1749626684 Type:5 Content:渠道 ollama 测试成功，响应：<think>
+Okay, the user is asking me to output only my specific model name without any additional text. Let me make sure I understand the request correctly. They want just the name, nothing else. My model name is Qwen, so I should respond with that. I need to check if there's any possible confusion here. Sometimes people might think the full name is needed, but the instruction is clear. I'll stick to the requirements and provide only "Qwen".
+</think>
+
+Qwen Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115243542351284387671947 ElapsedTime:9006 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 15:26:15 | 2025061115261532865301701926522 | 200 |     110.782µs |      172.26.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 15:26:15 | 2025061115261532828460450127639 | 200 |     651.645µs |      172.26.0.1 |     GET /api/channel/2
+[GIN] 2025/06/11 - 15:26:15 | 2025061115261532843588090849108 | 200 |    2.252321ms |      172.26.0.1 |     GET /api/channel/models
+[GIN] 2025/06/11 - 15:26:18 | 2025061115261842340247375584410 | 200 |     303.841µs |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 15:26:18 | 2025061115261842340246291910900 | 200 |     533.687µs |      172.26.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 15:26:46 | 2025061115264635320408666776390 | 200 |     353.675µs |      172.26.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 15:26:51 | 2025061115265122197777192251614 | 200 |     261.958µs |      172.26.0.1 |     GET /api/user/available_models
+[GIN] 2025/06/11 - 15:28:05 | 2025061115280550064832024079962 | 200 |    3.040162ms |      172.26.0.1 |    POST /api/token/
+[GIN] 2025/06/11 - 15:28:07 | 2025061115280728332289202887685 | 200 |    2.916424ms |      172.26.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 15:28:19 | 2025061115281945973826763723863 | 204 |      14.441µs |      172.26.0.1 | OPTIONS /v1/chat/completions
+[ERROR] 2025/06/11 - 15:28:19 | model/token.go:68 [ValidateUserToken] CacheGetTokenByKey failed: record not found 
+[ERROR] 2025/06/11 - 15:28:19 | 2025061115281946060637845399389 | middleware/utils.go:20 [abortWithMessage] 无效的令牌 
+[GIN] 2025/06/11 - 15:28:19 | 2025061115281946060637845399389 | 401 |     187.331µs |      172.26.0.1 |    POST /v1/chat/completions
+[GIN] 2025/06/11 - 15:28:19 | 2025061115281947937769989542284 | 204 |       4.638µs |      172.26.0.1 | OPTIONS /v1/chat/completions
+[ERROR] 2025/06/11 - 15:28:19 | model/token.go:68 [ValidateUserToken] CacheGetTokenByKey failed: record not found 
+[ERROR] 2025/06/11 - 15:28:19 | 2025061115281948027390255249441 | middleware/utils.go:20 [abortWithMessage] 无效的令牌 
+[GIN] 2025/06/11 - 15:28:19 | 2025061115281948027390255249441 | 401 |     121.825µs |      172.26.0.1 |    POST /v1/chat/completions
+[GIN] 2025/06/11 - 15:28:32 | 2025061115283239726988178721581 | 204 |      18.744µs |      172.26.0.1 | OPTIONS /v1/chat/completions
+[ERROR] 2025/06/11 - 15:28:32 | model/token.go:68 [ValidateUserToken] CacheGetTokenByKey failed: record not found 
+[ERROR] 2025/06/11 - 15:28:32 | 2025061115283239815963730395624 | middleware/utils.go:20 [abortWithMessage] 无效的令牌 
+[GIN] 2025/06/11 - 15:28:32 | 2025061115283239815963730395624 | 401 |     162.931µs |      172.26.0.1 |    POST /v1/chat/completions
+[GIN] 2025/06/11 - 15:28:32 | 2025061115283240793396290499462 | 204 |       4.333µs |      172.26.0.1 | OPTIONS /v1/chat/completions
+[ERROR] 2025/06/11 - 15:28:32 | model/token.go:68 [ValidateUserToken] CacheGetTokenByKey failed: record not found 
+[ERROR] 2025/06/11 - 15:28:32 | 2025061115283240880642837200167 | middleware/utils.go:20 [abortWithMessage] 无效的令牌 
+[GIN] 2025/06/11 - 15:28:32 | 2025061115283240880642837200167 | 401 |     119.175µs |      172.26.0.1 |    POST /v1/chat/completions
+[GIN] 2025/06/11 - 15:28:43 | 2025061115284363121012694178882 | 200 |    1.112185ms |      172.26.0.1 |     GET /api/log/?p=0&type=0&username=&token_name=&model_name=&start_timestamp=0&end_timestamp=1749630523&channel=
+[GIN] 2025/06/11 - 15:28:44 | 2025061115284461487810165471125 | 200 |     311.639µs |      172.26.0.1 |     GET /api/user/dashboard
+[GIN] 2025/06/11 - 15:28:45 | 2025061115284542267124950891037 | 200 |    1.308292ms |      172.26.0.1 |     GET /api/user/?p=0&order=
+[GIN] 2025/06/11 - 15:28:48 | 2025061115284816078780113696570 | 200 |     280.169µs |      172.26.0.1 |     GET /api/user/self
+[GIN] 2025/06/11 - 15:28:49 | 2025061115284910953524976504977 | 200 |     944.932µs |      172.26.0.1 |     GET /api/redemption/?p=0
+[GIN] 2025/06/11 - 15:28:50 | 2025061115285098828726371684404 | 200 |      931.07µs |      172.26.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 15:29:59 | 2025061115295964307505934618973 | 200 |    2.870288ms |      172.26.0.1 |     GET /api/user/available_models
+[GIN] 2025/06/11 - 15:30:10 | 2025061115301037113170751329714 | 200 |    4.303939ms |      172.26.0.1 |    POST /api/token/
+[GIN] 2025/06/11 - 15:40:44 | 2025061115404490709217428398609 | 200 |    2.512948ms |      172.26.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 15:55:20 | 2025061115552082642543558007902 | 200 |    1.686642ms |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 15:55:20 | 2025061115552082757580261036323 | 200 |    1.977406ms |      172.26.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 15:55:21 | 2025061115552142566080787986222 | 200 |     275.782µs |      172.26.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 15:55:24 | 2025061115552423263609159553023 | 200 |     553.194µs |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 15:55:24 | 2025061115552423399208487917415 | 200 |     508.295µs |      172.26.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 15:56:23 | 2025061115562321229173819012617 | 200 |     106.187µs |      172.26.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 15:56:23 | 2025061115562321215913151335630 | 200 |    2.314478ms |      172.26.0.1 |     GET /api/channel/models
+[GIN] 2025/06/11 - 15:57:17 | 2025061115571771532280090101732 | 200 |    4.279352ms |      172.26.0.1 |    POST /api/channel/
+[GIN] 2025/06/11 - 15:57:19 | 2025061115571991022257629661908 | 200 |     302.492µs |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 15:57:19 | 2025061115571991022370742191705 | 200 |     485.729µs |      172.26.0.1 |     GET /api/models
+[INFO] 2025/06/11 - 15:57:22 | controller/channel-test.go:131 [testChannel] {"model":"qwen2.5vl:3b","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[GIN] 2025/06/11 - 15:57:22 | 2025061115572263725801018602219 | 200 |    2.063918ms |      172.26.0.1 |     GET /api/channel/test/3?model=qwen2.5vl:3b
+[INFO] 2025/06/11 - 15:57:22 | 2025061115572263725801018602219 | model/log.go:51 [recordLogHelper] record log: &{Id:56 UserId:0 CreatedAt:1749628642 Type:5 Content:渠道 ollama2 测试失败，错误：do request failed: Post "http://host.docker.internal:11434/api/chat": dial tcp 172.17.0.1:11434: connect: connection refused Username: TokenName: ModelName:qwen2.5vl:3b Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:3 RequestId:2025061115572263725801018602219 ElapsedTime:0 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 15:57:25 | 2025061115572550747029030056930 | 200 |    1.959244ms |      172.26.0.1 |     GET /api/channel/3
+[GIN] 2025/06/11 - 15:57:25 | 2025061115572550957619994021579 | 200 |     432.515µs |      172.26.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 15:57:25 | 2025061115572550839594309330681 | 200 |    5.616901ms |      172.26.0.1 |     GET /api/channel/models
+[GIN] 2025/06/11 - 15:57:28 | 2025061115572890779757442809182 | 200 |    9.936769ms |      172.26.0.1 |     PUT /api/channel/
+[GIN] 2025/06/11 - 15:57:30 | 2025061115573059273213959968927 | 200 |    1.507028ms |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 15:57:30 | 2025061115573059370440413408666 | 200 |    4.205909ms |      172.26.0.1 |     GET /api/models
+[INFO] 2025/06/11 - 15:57:31 | controller/channel-test.go:131 [testChannel] {"model":"qwen2.5vl:3b","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[INFO] 2025/06/11 - 15:57:32 | controller/channel-test.go:165 [testChannel] testing channel #3, response: 
+{"id":"chatcmpl-1340cfa622814c8989558f08f1bd8bfb","model":"qwen2.5vl:3b","object":"chat.completion","created":1749628652,"choices":[{"index":0,"message":{"role":"assistant","content":"GPT-3"},"finish_reason":"stop"}],"usage":{"prompt_tokens":31,"completion_tokens":5,"total_tokens":36}} 
+[GIN] 2025/06/11 - 15:57:32 | 2025061115573141031282447407334 | 200 |   1.39463145s |      172.26.0.1 |     GET /api/channel/test/3?model=qwen2.5vl:3b
+[INFO] 2025/06/11 - 15:57:32 | 2025061115573141031282447407334 | model/log.go:51 [recordLogHelper] record log: &{Id:57 UserId:0 CreatedAt:1749628652 Type:5 Content:渠道 ollama2 测试成功，响应：GPT-3 Username: TokenName: ModelName:qwen2.5vl:3b Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:3 RequestId:2025061115573141031282447407334 ElapsedTime:1393 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 15:57:37 | 2025061115573729871003328934437 | 200 |     530.457µs |      172.26.0.1 |     GET /api/channel/2
+[GIN] 2025/06/11 - 15:57:37 | 2025061115573730080488078800187 | 200 |     264.891µs |      172.26.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 15:57:37 | 2025061115573729919018590780779 | 200 |    4.090216ms |      172.26.0.1 |     GET /api/channel/models
+[GIN] 2025/06/11 - 15:57:41 | 2025061115574171189590232111397 | 200 |    4.193246ms |      172.26.0.1 |     PUT /api/channel/
+[GIN] 2025/06/11 - 15:57:43 | 2025061115574343548760794450658 | 200 |    1.273986ms |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 15:57:43 | 2025061115574343651046026461731 | 200 |    1.977427ms |      172.26.0.1 |     GET /api/models
+[INFO] 2025/06/11 - 15:57:44 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[INFO] 2025/06/11 - 15:58:02 | controller/channel-test.go:165 [testChannel] testing channel #2, response: 
+{"id":"chatcmpl-0cfda75ff12948f3984cd1c9457dc711","model":"qwen3:4B","object":"chat.completion","created":1749628682,"choices":[{"index":0,"message":{"role":"assistant","content":"\u003cthink\u003e\nOkay, the user is asking me to output only my specific model name without any additional text. Let me make sure I understand the request correctly. They want just the name, no explanations or extra information.\n\nFirst, I need to recall what my model name is. I think it's Qwen, but I should confirm that. Wait, sometimes models have different names depending on the version or the context. But the user is asking for my specific model name, so it's likely Qwen. However, I should check if there's a more precise name. For example, sometimes it's referred to as Qwen or Qwen2, but I believe the primary name is Qwen. \n\nI need to make sure there's no confusion with other models. The user might be testing if I can provide the correct name without any extra text. So the answer should be just \"Qwen\" followed by a period, as per the example given. Let me double-check that there are no other possible names. No, I think Qwen is correct. So the response is straightforward.\n\u003c/think\u003e\n\nQwen."},"finish_reason":"stop"}],"usage":{"prompt_tokens":19,"completion_tokens":225,"total_tokens":244}} 
+[GIN] 2025/06/11 - 15:58:02 | 2025061115574426617878022505532 | 200 | 18.236751301s |      172.26.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 15:58:02 | 2025061115574426617878022505532 | model/log.go:51 [recordLogHelper] record log: &{Id:58 UserId:0 CreatedAt:1749628682 Type:5 Content:渠道 ollama 测试成功，响应：<think>
+Okay, the user is asking me to output only my specific model name without any additional text. Let me make sure I understand the request correctly. They want just the name, no explanations or extra information.
+
+First, I need to recall what my model name is. I think it's Qwen, but I should confirm that. Wait, sometimes models have different names depending on the version or the context. But the user is asking for my specific model name, so it's likely Qwen. However, I should check if there's a more precise name. For example, sometimes it's referred to as Qwen or Qwen2, but I believe the primary name is Qwen. 
+
+I need to make sure there's no confusion with other models. The user might be testing if I can provide the correct name without any extra text. So the answer should be just "Qwen" followed by a period, as per the example given. Let me double-check that there are no other possible names. No, I think Qwen is correct. So the response is straightforward.
+</think>
+
+Qwen. Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061115574426617878022505532 ElapsedTime:18235 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 16:03:02 | 2025061116030273250994089803283 | 200 |    2.960882ms |      172.26.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 16:03:08 | 2025061116030891982584015660245 | 200 |    1.011264ms |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 16:03:08 | 2025061116030891997651688117060 | 200 |    1.339066ms |      172.26.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 16:03:13 | 2025061116031369752633448751983 | 200 |    5.811026ms |      172.26.0.1 |  DELETE /api/channel/3
+[GIN] 2025/06/11 - 16:03:14 | 2025061116031492329668851750841 | 200 |      991.55µs |      172.26.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 16:05:03 | 2025061116050334094177879767467 | 200 |    5.194125ms |      172.26.0.1 |  DELETE /api/token/2
+[GIN] 2025/06/11 - 16:05:04 | 2025061116050470614672942311416 | 200 |     924.582µs |      172.26.0.1 |     GET /api/token/1
+[GIN] 2025/06/11 - 16:05:04 | 2025061116050470615739910308363 | 200 |    2.536356ms |      172.26.0.1 |     GET /api/user/available_models
+[GIN] 2025/06/11 - 16:05:34 | 202506111605343599056674636265 | 200 |    4.022266ms |      172.26.0.1 |     PUT /api/token/
+[GIN] 2025/06/11 - 16:05:36 | 2025061116053610499118190107659 | 200 |     978.093µs |      172.26.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 16:06:06 | 2025061116060633127381878980843 | 404 |     288.008µs |      172.26.0.1 |     GET /v1
+[GIN] 2025/06/11 - 16:06:06 | 2025061116060634673544357382301 | 200 |     197.455µs |      172.26.0.1 |     GET /favicon.ico
+[ERROR] 2025/06/11 - 16:15:36 | 2025061116153624235497180589737 | middleware/utils.go:20 [abortWithMessage] 该令牌无权使用模型：qwen3:4B 
+[GIN] 2025/06/11 - 16:15:36 | 2025061116153624235497180589737 | 403 |     584.635µs |      172.26.0.1 |    POST /v1/chat/completions
+[GIN] 2025/06/11 - 16:18:27 | 2025061116182789243039577159449 | 200 |    2.108201ms |      172.26.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 16:18:27 | 2025061116182789243106900130416 | 200 |    2.123016ms |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 16:18:43 | 2025061116184321832113698307891 | 200 |     900.029µs |      172.26.0.1 |     GET /api/channel/2
+[GIN] 2025/06/11 - 16:18:43 | 2025061116184321976514927473771 | 200 |     388.192µs |      172.26.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 16:18:43 | 2025061116184321877565599336975 | 200 |     4.23268ms |      172.26.0.1 |     GET /api/channel/models
+[GIN] 2025/06/11 - 16:18:55 | 202506111618559268074873919965 | 200 |    3.822061ms |      172.26.0.1 |     PUT /api/channel/
+[GIN] 2025/06/11 - 16:18:57 | 2025061116185725265093329865495 | 200 |      275.71µs |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 16:18:57 | 2025061116185725284603543401248 | 200 |     529.758µs |      172.26.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 16:18:59 | 2025061116185969742680120932691 | 200 |     439.854µs |      172.26.0.1 |     GET /api/channel/1
+[GIN] 2025/06/11 - 16:18:59 | 2025061116185969782303008844458 | 200 |      79.546µs |      172.26.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 16:18:59 | 2025061116185969760133930306355 | 200 |    2.197792ms |      172.26.0.1 |     GET /api/channel/models
+[GIN] 2025/06/11 - 16:19:06 | 2025061116190633624439390271066 | 200 |    7.652074ms |      172.26.0.1 |     PUT /api/channel/
+[GIN] 2025/06/11 - 16:19:07 | 2025061116190789083034583180540 | 200 |    1.095476ms |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 16:19:07 | 2025061116190789105936502962142 | 200 |    3.022159ms |      172.26.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 16:19:17 | 2025061116191710306672748508532 | 200 |     288.466µs |      172.26.0.1 |     GET /api/channel/2
+[GIN] 2025/06/11 - 16:19:17 | 2025061116191710339435748090350 | 200 |     121.888µs |      172.26.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 16:19:17 | 2025061116191710335749939844125 | 200 |    3.033844ms |      172.26.0.1 |     GET /api/channel/models
+[GIN] 2025/06/11 - 16:19:19 | 2025061116191956845566534869464 | 200 |    1.202244ms |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 16:19:19 | 2025061116191956840400291121850 | 200 |    2.893032ms |      172.26.0.1 |     GET /api/models
+[INFO] 2025/06/11 - 16:22:08 | controller/channel-test.go:131 [testChannel] {"model":"qwen3:4B","messages":[{"role":"user","content":"Output only your specific model name with no additional text."}],"stream":false,"options":{}} 
+[INFO] 2025/06/11 - 16:22:25 | controller/channel-test.go:165 [testChannel] testing channel #2, response: 
+{"id":"chatcmpl-d4b2b8fb89c943a3aba2a066af01fbfa","model":"qwen3:4B","object":"chat.completion","created":1749630145,"choices":[{"index":0,"message":{"role":"assistant","content":"\u003cthink\u003e\nOkay, the user is asking me to output only my specific model name without any additional text. Let me make sure I understand the request correctly. They want just the name, nothing else. So, I need to recall what my model name is. I think it's Qwen, but I should double-check to avoid any mistakes. Wait, yes, my name is Qwen. But maybe they want the full name or a different variation? No, the instruction is specific—just the model name. I should avoid adding any other information like version numbers or other details. Let me confirm again. The user said \"your specific model name\" and \"no additional text.\" So, the answer should be \"Qwen\" alone. I need to make sure there's no extra text, no explanations, just the name. Alright, that's straightforward. I'll respond with \"Qwen\" as required.\n\u003c/think\u003e\n\nQwen"},"finish_reason":"stop"}],"usage":{"prompt_tokens":19,"completion_tokens":189,"total_tokens":208}} 
+[GIN] 2025/06/11 - 16:22:25 | 2025061116220862087128820434078 | 200 | 16.529877699s |      172.26.0.1 |     GET /api/channel/test/2?model=qwen3:4B
+[INFO] 2025/06/11 - 16:22:25 | 2025061116220862087128820434078 | model/log.go:51 [recordLogHelper] record log: &{Id:59 UserId:0 CreatedAt:1749630145 Type:5 Content:渠道 qwen3:4B 测试成功，响应：<think>
+Okay, the user is asking me to output only my specific model name without any additional text. Let me make sure I understand the request correctly. They want just the name, nothing else. So, I need to recall what my model name is. I think it's Qwen, but I should double-check to avoid any mistakes. Wait, yes, my name is Qwen. But maybe they want the full name or a different variation? No, the instruction is specific—just the model name. I should avoid adding any other information like version numbers or other details. Let me confirm again. The user said "your specific model name" and "no additional text." So, the answer should be "Qwen" alone. I need to make sure there's no extra text, no explanations, just the name. Alright, that's straightforward. I'll respond with "Qwen" as required.
+</think>
+
+Qwen Username: TokenName: ModelName:qwen3:4B Quota:0 PromptTokens:0 CompletionTokens:0 ChannelId:2 RequestId:2025061116220862087128820434078 ElapsedTime:16527 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 16:45:54 | 2025061116455438096169232562155 | 200 |     659.361µs |      172.26.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 16:46:00 | 2025061116460081444433000596825 | 200 |     271.391µs |      172.26.0.1 |     GET /api/token/1
+[GIN] 2025/06/11 - 16:46:00 | 2025061116460081482429522265979 | 200 |     357.807µs |      172.26.0.1 |     GET /api/user/available_models
+[GIN] 2025/06/11 - 16:46:06 | 2025061116460658858671969723993 | 200 |      801.08µs |      172.26.0.1 |     GET /api/token/?p=0&order=
+[ERROR] 2025/06/11 - 16:47:58 | 2025061116475863452673498286084 | middleware/utils.go:20 [abortWithMessage] 该令牌无权使用模型：qwen3:4B 
+[GIN] 2025/06/11 - 16:47:58 | 2025061116475863452673498286084 | 403 |     570.791µs |      172.26.0.1 |    POST /v1/chat/completions
+[ERROR] 2025/06/11 - 16:52:33 | 2025061116523373614256790124545 | middleware/utils.go:20 [abortWithMessage] 该令牌无权使用模型：qwen3:4B 
+[GIN] 2025/06/11 - 16:52:33 | 2025061116523373614256790124545 | 403 |     527.097µs |      172.26.0.1 |    POST /v1/chat/completions
+[ERROR] 2025/06/11 - 16:54:55 | 202506111654558972099273348240 | middleware/utils.go:20 [abortWithMessage] 该令牌无权使用模型：qwen3:4B 
+[GIN] 2025/06/11 - 16:54:55 | 202506111654558972099273348240 | 403 |     531.569µs |      172.26.0.1 |    POST /v1/chat/completions
+[GIN] 2025/06/11 - 16:55:48 | 2025061116554898410639047208966 | 200 |    2.210076ms |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 16:55:48 | 2025061116554898404723920715159 | 200 |    2.436746ms |      172.26.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 16:56:23 | 2025061116562374457074278843795 | 200 |     407.019µs |      172.26.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 16:56:23 | 2025061116562374406327266448976 | 200 |     918.685µs |      172.26.0.1 |     GET /api/channel/1
+[GIN] 2025/06/11 - 16:56:23 | 2025061116562374408712430230511 | 200 |    2.551537ms |      172.26.0.1 |     GET /api/channel/models
+[GIN] 2025/06/11 - 16:56:25 | 2025061116562553745677104458742 | 200 |     439.934µs |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 16:56:25 | 2025061116562553748732791697301 | 200 |     669.328µs |      172.26.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 16:59:49 | 2025061116594914899926949253582 | 200 |    3.167222ms |      172.26.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 17:00:06 | 2025061117000611348707656708034 | 200 |     113.366µs |      172.26.0.1 |    POST /chat/completions
+[ERROR] 2025/06/11 - 17:00:30 | 2025061117003076571078055411355 | middleware/utils.go:20 [abortWithMessage] 该令牌无权使用模型：qwen3:4B 
+[GIN] 2025/06/11 - 17:00:30 | 2025061117003076571078055411355 | 403 |     250.888µs |      172.26.0.1 |    POST /v1/chat/completions
+[GIN] 2025/06/11 - 17:00:47 | 2025061117004783602195502442232 | 200 |     384.457µs |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 17:00:47 | 2025061117004783623979144110350 | 200 |     683.245µs |      172.26.0.1 |     GET /api/models
+[ERROR] 2025/06/11 - 17:01:01 | 2025061117010122843650183671698 | middleware/utils.go:20 [abortWithMessage] 该令牌无权使用模型：deepseek-chat 
+[GIN] 2025/06/11 - 17:01:01 | 2025061117010122843650183671698 | 403 |     506.353µs |      172.26.0.1 |    POST /v1/chat/completions
+[GIN] 2025/06/11 - 17:01:46 | 2025061117014623505317119852012 | 200 |      904.26µs |      172.26.0.1 |     GET /api/redemption/?p=0
+[GIN] 2025/06/11 - 17:01:46 | 2025061117014679335879022107671 | 200 |     260.168µs |      172.26.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 17:01:49 | 2025061117014986355195003950765 | 200 |     642.513µs |      172.26.0.1 |     GET /api/token/1
+[GIN] 2025/06/11 - 17:01:49 | 2025061117014986450577899659248 | 200 |    1.023013ms |      172.26.0.1 |     GET /api/user/available_models
+[GIN] 2025/06/11 - 17:01:57 | 202506111701578448530529536683 | 200 |     4.31614ms |      172.26.0.1 |     PUT /api/token/
+[GIN] 2025/06/11 - 17:02:07 | 2025061117020740914420693067032 | 200 |    5.010164ms |      172.26.0.1 |     PUT /api/token/
+[GIN] 2025/06/11 - 17:02:08 | 2025061117020861017261142448632 | 200 |     940.436µs |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 17:02:08 | 2025061117020861058313863219933 | 200 |    1.430543ms |      172.26.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 17:02:09 | 2025061117020947827864637806532 | 200 |    2.581338ms |      172.26.0.1 |     GET /api/token/?p=0&order=
+[ERROR] 2025/06/11 - 17:02:17 | relay/adaptor/openai/token.go:60 [getTokenEncoder] failed to get token encoder for model deepseek-chat: no encoding for model deepseek-chat, using encoder for gpt-3.5-turbo 
+[INFO] 2025/06/11 - 17:02:17 | 2025061117021735649737133055021 | relay/controller/helper.go:86 [preConsumeQuota] user 1 has enough quota 500000000000000, trusted and no need to pre-consume 
+[GIN] 2025/06/11 - 17:02:24 | 2025061117021735649737133055021 | 200 |  7.354844179s |      172.26.0.1 |    POST /v1/chat/completions
+[INFO] 2025/06/11 - 17:02:24 | 2025061117021735649737133055021 | model/log.go:51 [recordLogHelper] record log: &{Id:60 UserId:1 CreatedAt:1749632544 Type:2 Content:倍率：0.07 × 1.00 × 2.00 Username:root TokenName:qwen ModelName:deepseek-chat Quota:12 PromptTokens:4 CompletionTokens:80 ChannelId:1 RequestId:2025061117021735649737133055021 ElapsedTime:7358 IsStream:false SystemPromptReset:false} 
+[ERROR] 2025/06/11 - 17:02:39 | relay/billing/ratio/model.go:460 [GetModelRatio] model ratio not found: qwen3:4B 
+[INFO] 2025/06/11 - 17:02:39 | 2025061117023946948481166688276 | relay/controller/helper.go:86 [preConsumeQuota] user 1 has enough quota 499999999999988, trusted and no need to pre-consume 
+[GIN] 2025/06/11 - 17:02:59 | 2025061117025917834054488423029 | 200 |     651.721µs |      172.26.0.1 |     GET /api/user/?p=0&order=
+[GIN] 2025/06/11 - 17:03:00 | 2025061117023946948481166688276 | 200 |  20.86348669s |      172.26.0.1 |    POST /v1/chat/completions
+[INFO] 2025/06/11 - 17:03:00 | 2025061117023946948481166688276 | model/log.go:51 [recordLogHelper] record log: &{Id:61 UserId:1 CreatedAt:1749632580 Type:2 Content:倍率：30.00 × 1.00 × 1.00 Username:root TokenName:qwen ModelName:qwen3:4B Quota:8100 PromptTokens:10 CompletionTokens:260 ChannelId:2 RequestId:2025061117023946948481166688276 ElapsedTime:20865 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 17:03:00 | 2025061117030058732289227381227 | 200 |    1.021887ms |      172.26.0.1 |     GET /api/user/dashboard
+[ERROR] 2025/06/11 - 17:05:24 | relay/billing/ratio/model.go:460 [GetModelRatio] model ratio not found: qwen3:4B 
+[INFO] 2025/06/11 - 17:05:24 | 2025061117052494099257393799241 | relay/controller/helper.go:86 [preConsumeQuota] user 1 has enough quota 499999999991888, trusted and no need to pre-consume 
+[GIN] 2025/06/11 - 17:06:05 | 2025061117052494099257393799241 | 200 | 40.755590651s |      172.26.0.1 |    POST /v1/chat/completions
+[INFO] 2025/06/11 - 17:06:05 | 2025061117052494099257393799241 | model/log.go:51 [recordLogHelper] record log: &{Id:62 UserId:1 CreatedAt:1749632765 Type:2 Content:倍率：30.00 × 1.00 × 1.00 Username:root TokenName:qwen ModelName:qwen3:4B Quota:53220 PromptTokens:1570 CompletionTokens:204 ChannelId:2 RequestId:2025061117052494099257393799241 ElapsedTime:40756 IsStream:true SystemPromptReset:false} 
+[INFO] 2025/06/11 - 17:06:32 | 2025061117063275089330564878554 | relay/controller/helper.go:86 [preConsumeQuota] user 1 has enough quota 499999999938668, trusted and no need to pre-consume 
+[GIN] 2025/06/11 - 17:06:40 | 2025061117063275089330564878554 | 200 |  7.653666236s |      172.26.0.1 |    POST /v1/chat/completions
+[INFO] 2025/06/11 - 17:06:40 | 2025061117063275089330564878554 | model/log.go:51 [recordLogHelper] record log: &{Id:63 UserId:1 CreatedAt:1749632800 Type:2 Content:倍率：0.07 × 1.00 × 2.00 Username:root TokenName:qwen ModelName:deepseek-chat Quota:13 PromptTokens:6 CompletionTokens:83 ChannelId:1 RequestId:2025061117063275089330564878554 ElapsedTime:7657 IsStream:false SystemPromptReset:false} 
+[GIN] 2025/06/11 - 17:09:39 | 2025061117093958530727482311776 | 200 |    1.986531ms |      172.26.0.1 |     GET /api/redemption/?p=0
+[GIN] 2025/06/11 - 17:09:40 | 2025061117094029433177814837646 | 200 |     276.562µs |      172.26.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 17:09:42 | 2025061117094245033185728421011 | 200 |     1.24439ms |      172.26.0.1 |     GET /api/token/1
+[GIN] 2025/06/11 - 17:09:42 | 2025061117094245071475216957485 | 200 |    3.372044ms |      172.26.0.1 |     GET /api/user/available_models
+[GIN] 2025/06/11 - 17:09:50 | 2025061117095029211729244812483 | 200 |    3.710951ms |      172.26.0.1 |     PUT /api/token/
+[GIN] 2025/06/11 - 17:09:51 | 2025061117095171056079687204669 | 200 |     312.222µs |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 17:09:51 | 2025061117095171067806198407943 | 200 |     495.813µs |      172.26.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 17:10:00 | 2025061117100063730850074803994 | 200 |    1.219902ms |      172.26.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 17:10:04 | 2025061117100411927945891413448 | 200 |      428.43µs |      172.26.0.1 |     GET /api/token/1
+[GIN] 2025/06/11 - 17:10:04 | 2025061117100411997551146137667 | 200 |     971.382µs |      172.26.0.1 |     GET /api/user/available_models
+[GIN] 2025/06/11 - 17:10:32 | 2025061117103230455783954443435 | 200 |    3.870897ms |      172.26.0.1 |     PUT /api/token/
+[ERROR] 2025/06/11 - 17:13:50 | relay/billing/ratio/model.go:460 [GetModelRatio] model ratio not found: qwen3:4B 
+[INFO] 2025/06/11 - 17:13:50 | 2025061117135012819818137698490 | relay/controller/helper.go:86 [preConsumeQuota] user 1 has enough quota 499999999938655, trusted and no need to pre-consume 
+[GIN] 2025/06/11 - 17:14:37 | 2025061117143747829870434238431 | 200 |     702.923µs |      172.26.0.1 |     GET /api/user/self
+[GIN] 2025/06/11 - 17:14:37 | 2025061117143792948057065333202 | 200 |     549.912µs |      172.26.0.1 |     GET /api/user/?p=0&order=
+[GIN] 2025/06/11 - 17:14:39 | 202506111714393077161663637480 | 200 |     440.809µs |      172.26.0.1 |     GET /api/user/dashboard
+[GIN] 2025/06/11 - 17:14:39 | 2025061117143946615141368333394 | 200 |     748.849µs |      172.26.0.1 |     GET /api/log/?p=0&type=0&username=&token_name=&model_name=&start_timestamp=0&end_timestamp=1749636879&channel=
+[GIN] 2025/06/11 - 17:14:39 | 2025061117143990864884374884527 | 200 |     538.492µs |      172.26.0.1 |     GET /api/user/dashboard
+[GIN] 2025/06/11 - 17:14:40 | 2025061117144060722582356234062 | 200 |     682.273µs |      172.26.0.1 |     GET /api/log/?p=0&type=0&username=&token_name=&model_name=&start_timestamp=0&end_timestamp=1749636880&channel=
+[GIN] 2025/06/11 - 17:14:53 | 2025061117145353521881569687521 | 200 |    1.054789ms |      172.26.0.1 |     GET /api/user/dashboard
+[GIN] 2025/06/11 - 17:15:03 | 2025061117135012819818137698490 | 200 | 1m13.621900477s |      172.26.0.1 |    POST /v1/chat/completions
+[INFO] 2025/06/11 - 17:15:03 | 2025061117135012819818137698490 | model/log.go:51 [recordLogHelper] record log: &{Id:64 UserId:1 CreatedAt:1749633303 Type:2 Content:倍率：30.00 × 1.00 × 1.00 Username:root TokenName:qwen ModelName:qwen3:4B Quota:72480 PromptTokens:1946 CompletionTokens:470 ChannelId:2 RequestId:2025061117135012819818137698490 ElapsedTime:73622 IsStream:true SystemPromptReset:false} 
+[ERROR] 2025/06/11 - 17:16:25 | relay/billing/ratio/model.go:460 [GetModelRatio] model ratio not found: qwen3:4B 
+[INFO] 2025/06/11 - 17:16:25 | 2025061117162551977098519070857 | relay/controller/helper.go:86 [preConsumeQuota] user 1 has enough quota 499999999866175, trusted and no need to pre-consume 
+[GIN] 2025/06/11 - 17:18:20 | 202506111718207609513439383351 | 200 |     1.21763ms |      172.26.0.1 |     GET /api/log/?p=0&type=0&username=&token_name=&model_name=&start_timestamp=0&end_timestamp=1749637100&channel=
+[GIN] 2025/06/11 - 17:18:35 | 202506111718357235704370617856 | 200 |     624.677µs |      172.26.0.1 |     GET /api/channel/2
+[GIN] 2025/06/11 - 17:18:35 | 202506111718357294472840091215 | 200 |     297.543µs |      172.26.0.1 |     GET /api/group/
+[GIN] 2025/06/11 - 17:18:35 | 202506111718357238290122117496 | 200 |    3.236873ms |      172.26.0.1 |     GET /api/channel/models
+[GIN] 2025/06/11 - 17:18:37 | 2025061117183750303508141687311 | 200 |     588.193µs |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 17:18:37 | 2025061117183750309126091162870 | 200 |     764.684µs |      172.26.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 17:18:39 | 2025061117183958215507739844285 | 200 |       547.3µs |      172.26.0.1 |     GET /api/user/dashboard
+[GIN] 2025/06/11 - 17:18:40 | 2025061117184028163859922891000 | 200 |     786.153µs |      172.26.0.1 |     GET /api/log/?p=0&type=0&username=&token_name=&model_name=&start_timestamp=0&end_timestamp=1749637120&channel=
+[GIN] 2025/06/11 - 17:18:49 | 2025061117184980430903634071658 | 200 |     439.858µs |      172.26.0.1 |     GET /api/user/dashboard
+[GIN] 2025/06/11 - 17:18:50 | 2025061117185038130939052801154 | 200 |     695.342µs |      172.26.0.1 |     GET /api/log/?p=0&type=0&username=&token_name=&model_name=&start_timestamp=0&end_timestamp=1749637130&channel=
+[GIN] 2025/06/11 - 17:18:52 | 2025061117185231948648563953809 | 200 |     716.286µs |      172.26.0.1 |     GET /api/log/?p=0&type=0&username=&token_name=&model_name=&start_timestamp=0&end_timestamp=1749637132&channel=
+[GIN] 2025/06/11 - 17:18:52 | 2025061117185282411040192616540 | 200 |     131.028µs |      172.26.0.1 |     GET /api/about
+[GIN] 2025/06/11 - 17:18:53 | 2025061117185343767475307800558 | 200 |     690.117µs |      172.26.0.1 |     GET /api/log/?p=0&type=0&username=&token_name=&model_name=&start_timestamp=0&end_timestamp=1749637133&channel=
+[GIN] 2025/06/11 - 17:18:54 | 2025061117185442177287774548003 | 200 |     149.799µs |      172.26.0.1 |     GET /api/about
+[GIN] 2025/06/11 - 17:18:57 | 2025061117185715984833418556959 | 200 |     725.119µs |      172.26.0.1 |     GET /api/log/?p=0&type=0&username=&token_name=&model_name=&start_timestamp=0&end_timestamp=1749637137&channel=
+[GIN] 2025/06/11 - 17:18:57 | 2025061117185777663686955605433 | 200 |     480.803µs |      172.26.0.1 |     GET /api/user/dashboard
+[GIN] 2025/06/11 - 17:18:58 | 2025061117185847438407037828471 | 200 |      506.59µs |      172.26.0.1 |     GET /api/user/?p=0&order=
+[GIN] 2025/06/11 - 17:19:00 | 2025061117190091286956805674562 | 200 |     532.565µs |      172.26.0.1 |     GET /api/user/self
+[GIN] 2025/06/11 - 17:19:02 | 202506111719024405859228797129 | 200 |     381.142µs |      172.26.0.1 |     GET /api/redemption/?p=0
+[GIN] 2025/06/11 - 17:19:03 | 2025061117190353986579877650136 | 200 |     587.443µs |      172.26.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 17:19:04 | 2025061117162551977098519070857 | 200 | 2m39.23278734s |      172.26.0.1 |    POST /v1/chat/completions
+[INFO] 2025/06/11 - 17:19:04 | 2025061117162551977098519070857 | model/log.go:51 [recordLogHelper] record log: &{Id:65 UserId:1 CreatedAt:1749633544 Type:2 Content:倍率：30.00 × 1.00 × 1.00 Username:root TokenName:qwen ModelName:qwen3:4B Quota:117990 PromptTokens:2671 CompletionTokens:1262 ChannelId:2 RequestId:2025061117162551977098519070857 ElapsedTime:159234 IsStream:true SystemPromptReset:false} 
+[GIN] 2025/06/11 - 17:19:04 | 2025061117190493109258238125132 | 200 |     213.792µs |      172.26.0.1 |     GET /api/redemption/?p=0
+[GIN] 2025/06/11 - 17:19:16 | 2025061117191650874398921172907 | 200 |    1.426131ms |      172.26.0.1 |     GET /api/user/?p=0&order=
+[GIN] 2025/06/11 - 17:19:17 | 2025061117191741358467337221860 | 200 |     343.364µs |      172.26.0.1 |     GET /api/token/?p=0&order=
+[GIN] 2025/06/11 - 17:19:18 | 202506111719181266196820314401 | 200 |    1.604977ms |      172.26.0.1 |     GET /api/channel/?p=0
+[GIN] 2025/06/11 - 17:19:18 | 202506111719181287516026589245 | 200 |    3.063799ms |      172.26.0.1 |     GET /api/models
+[GIN] 2025/06/11 - 17:19:18 | 2025061117191879817103463113483 | 200 |     3.03549ms |      172.26.0.1 |     GET /api/log/?p=0&type=0&username=&token_name=&model_name=&start_timestamp=0&end_timestamp=1749637158&channel=
