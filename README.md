@@ -4,7 +4,8 @@
 
 **NEV-DiagBot** 是一个基于本地大模型（LLM）和检索增强生成（RAG）技术的智能问答系统，专注于新能源汽车领域的故障诊断、使用指南和知识咨询。
 ![image](https://github.com/user-attachments/assets/4a03a155-37f6-46ef-908c-351595c5e389)
-![image](https://github.com/user-attachments/assets/bf20cc52-fae0-4503-b65c-c7573233babb)
+![image](https://github.com/user-attachments/assets/c3b0c001-1e4f-4cea-8b1f-608d02481685)
+
 
 ## 我们的目标
 
